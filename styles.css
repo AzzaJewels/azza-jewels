@@ -200,3 +200,9 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+.logo {
+  width: 120px;  /* or smaller, e.g., 100px */
+  height: auto;
+  /* margin-bottom: 1rem; */
+}
