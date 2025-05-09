@@ -206,3 +206,36 @@ footer {
   height: auto;
   /* margin-bottom: 1rem; */
 }
+
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-item {
+  width: 250px; /* Limits image + text block */
+  text-align: center;
+}
+
+.gallery-item img,
+.section-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.section-image,
+.gallery-item img {
+  max-height: 300px;
+}
