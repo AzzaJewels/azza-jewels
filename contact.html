@@ -11,6 +11,7 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body>
   <!-- Navigation -->
@@ -19,6 +20,7 @@
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Azza Jewels Logo" />
       </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About &amp; Timeline</a></li>
@@ -26,7 +28,6 @@
         <li><a href="mission.html">Mission &amp; Vision</a></li>
         <li><a href="contact.html" class="active btn">Contact</a></li>
       </ul>
-      <button class="nav-toggle">☰</button>
     </div>
   </nav>
 
@@ -43,6 +44,29 @@
     </div>
   </section>
 
+  <!-- Location Embed & Address -->
+  <section class="section location">
+    <div class="container">
+      <h2>Our Location</h2>
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Muscat%20Oman&z=13&output=embed"
+          frameborder="0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <address class="address">
+        <strong>Azza Jewels Factory & Showroom</strong><br />
+        Area: Muttrah-Darsait<br />
+        Building Number: 2015<br />
+        Plot Number: 43<br />
+        Way Number: 2625<br />
+        Sultanate of Oman
+      </address>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
@@ -51,9 +75,13 @@
   </footer>
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
-    });
+    document
+      .querySelector('.nav-toggle')
+      .addEventListener('click', () => {
+        document
+          .querySelector('.nav-menu')
+          .classList.toggle('nav-menu_visible');
+      });
   </script>
 </body>
 </html>
