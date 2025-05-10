@@ -1,103 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Azza Jewels | Jewels of Oman</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+  <title>Azza Jewels | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="hero">
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="videos/jewelry_bg.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="hero-overlay">
-      <img src="images/logo.png" alt="Azza Jewels Logo" class="logo">
-      <h1>Azza Jewels</h1>
-      <p>Where Heritage Meets Elegance</p>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Azza Jewels Logo" />
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About &amp; Timeline</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="mission.html">Mission &amp; Vision</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
     </div>
-  </header>
+  </nav>
 
-  <section class="mission">
-    <h2>Our Vision</h2>
-    <p>
-      At Azza Jewels, we believe every creation tells a story — of heritage, craftsmanship, and timeless beauty.
-      We are driven by a passion to:
-    </p>
-    <ul>
-      <li>✨ Design and craft exquisite, handcrafted jewellery</li>
-      <li>💛 Uplift skilled artisans through meaningful employment</li>
-    </ul>
-  </section>
+    <!-- Hero Section -->
+    <header class="hero">
+      <video class="hero-video" autoplay muted loop>
+        <source src="videos/jewelry_bg.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <!-- float animation -->
+        <img src="images/logo.png" alt="Azza Jewels Logo" class="hero-logo float" />
+        <!-- slide in -->
+        <h1 class="slide-in-down">Azza Jewels</h1>
+        <p class="slide-in-up">Where Heritage Meets Elegance</p>
+        <a href="collections.html" class="btn slide-in-up" style="animation-delay:0.4s;">
+          Explore Collections
+        </a>
+      </div>
+    </header>
+  
+    <!-- Carat Banner -->
+    <section class="banner slide-in-up">
+      <div class="container">
+        <h2>Crafting in 18, 21 &amp; 22 Carats</h2>
+        <p>R&amp;D Underway for 10 &amp; 14 Carat Collections</p>
+      </div>
+    </section>
+  
+    <!-- Craftsmanship Highlight -->
+    <section class="section craftsmanship">
+      <div class="container">
+        <!-- slide in left -->
+        <h2 class="slide-in-left">Exquisite Craftsmanship</h2>
+        <!-- slide in right -->
+        <p class="slide-in-right" style="animation-delay:0.2s;">
+          Every piece at Azza Jewels is unique and meticulously handcrafted in our
+          state-of-the-art production factory in Oman. From concept sketches to
+          final polishing, our master artisans blend time-honored techniques with
+          innovative design tools. We source only the finest gold and gemstones,
+          ensuring each item—whether a delicate pendant or a bold statement ring—embodies
+          luxury, durability, and personal expression. Experience jewellery as art,
+          forged in the heart of Oman’s heritage.
+        </p>
+      </div>
+    </section>
+  
+    <!-- Collections Teaser -->
+    <section class="section collections">
+      <div class="container">
+        <h2 class="slide-in-down">Featured Collections</h2>
+        <div class="grid">
+          <div class="card fade-in-up" style="animation-delay:0.2s;">
+            <img src="images/earrings_classic.jpg" alt="Signature Rings" />
+            <h3>Signature Rings</h3>
+            <a href="collections.html#rings" class="link">View Rings →</a>
+          </div>
+          <div class="card fade-in-up" style="animation-delay:0.4s;">
+            <img src="images/necklace_heritage.jpg" alt="Luxurious Necklaces" />
+            <h3>Luxurious Necklaces</h3>
+            <a href="collections.html#necklaces" class="link">View Necklaces →</a>
+          </div>
+          <div class="card fade-in-up" style="animation-delay:0.6s;">
+            <img src="images/bracelet_modern.jpg" alt="Elegant Bracelets" />
+            <h3>Elegant Bracelets</h3>
+            <a href="collections.html#bracelets" class="link">View Bracelets →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section class="products">
-    <h2>Signature Creations</h2>
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="images/ring_gold.jpg" alt="Gold Ring" />
-        <h4>Elegant Gold Ring</h4>
-        <p>A graceful blend of minimalism and opulence — the essence of timeless design.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/bracelet_modern.jpg" alt="Modern Bracelet" />
-        <h4>Modern Gold Bracelet</h4>
-        <p>Sculpted with sophistication, this piece embodies contemporary luxury.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="images/earrings_classic.jpg" alt="Classic Earrings" />
-        <h4>Classic Diamond Earrings</h4>
-        <p>Inspired by royal traditions, refined for the modern connoisseur.</p>
-      </div>
+  <!-- Founder & Timeline Teaser -->
+  <section class="section founder-teaser">
+    <div class="container">
+      <h2>About Our Founder</h2>
+      <p>
+        Mr. Chetan Shah, the visionary founder of Azza Jewels, brings over
+        three decades of excellence in the gems &amp; jewellery industry.
+        <a href="about.html">Read More →</a>
+      </p>
+      <ul class="timeline-teaser">
+        <li><strong>1998:</strong> Began fine metals trading in the Middle East.</li>
+        <li><strong>2006:</strong> Established first manufacturing unit in India.</li>
+        <li><strong>2015:</strong> Launched Azza Jewels.</li>
+        <li><strong>2022:</strong> Expanded to a 12,000 sq ft facility in Oman.</li>
+      </ul>
+      <a href="about.html" class="btn">Full Story &amp; Timeline</a>
     </div>
   </section>
 
-  <section class="production">
-    <h2>Crafted to Perfection</h2>
-    <ul>
-      <li>📍 Proudly based in Oman</li>
-      <li>🏗️ 12,000 ft² advanced production facility</li>
-      <li>👩‍🏭 50+ master artisans shaping each jewel</li>
-      <li>🛠️ Each piece is one-of-a-kind, meticulously handcrafted</li>
-    </ul>
-    <img src="images/factory.jpg" alt="Azza Jewels Factory" class="section-image">
-  </section>
-
-  <section class="location">
-    <h2>Global Reach</h2>
-    <p>
-      Strategically located in <strong>Oman</strong>, Azza Jewels proudly serves discerning clients across the Middle East and beyond.
-    </p>
-    <img src="images/oman_location.jpg" alt="Oman Location" class="section-image">
-  </section>
-
-  <section class="heritage">
-    <h2>The Legacy of Omani Jewels</h2>
-    <p>
-      Honoring the artistic spirit of Oman, our designs fuse traditional techniques with contemporary sensibilities, celebrating generations of jewelry mastery.
-    </p>
-    <img src="images/oman_heritage.jpg" alt="Omani Heritage" class="section-image">
-  </section>
-
-  <section class="about">
-    <h2>Meet Mr. Chetan Shah</h2>
-    <p>
-      With over three decades of experience in the global jewellery industry, Mr. Chetan Shah is the visionary behind Azza Jewels. His legacy spans acclaimed ventures like Maa Padma Exports and Cambay Gold FZE, driven by an unwavering commitment to excellence and innovation.
-    </p>
-    <img src="images/chetan_shah.jpg" alt="Mr. Chetan Shah" class="section-image">
-  </section>
-
-  <footer>
-    <p><strong>Handcrafted in Oman. Adored Worldwide.</strong></p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Azza Jewels. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Mobile menu toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+  </script>
 </body>
-
 </html>

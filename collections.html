@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azza Jewels | Collections</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Azza Jewels Logo" />
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About &amp; Timeline</a></li>
+        <li><a href="collections.html" class="active">Collections</a></li>
+        <li><a href="mission.html">Mission &amp; Vision</a></li>
+        <li><a href="contact.html" class="btn">Contact</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+  <!-- Signature Rings -->
+  <section id="rings" class="section">
+    <div class="container">
+      <h2>Signature Rings</h2>
+      <p>
+        Explore our 18K gold and platinum rings set with ethically sourced
+        diamonds, emeralds, and sapphires. From classic solitaires to intricate
+        Omani-inspired bands, each piece tells a story.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <img src="images/ring1.jpg" alt="Solitaire Elegance" />
+          <h3>Solitaire Elegance</h3>
+        </div>
+        <div class="card">
+          <img src="images/ring2.jpg" alt="Emerald Cut Artistry" />
+          <h3>Emerald Cut Artistry</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxurious Necklaces -->
+  <section id="necklaces" class="section">
+    <div class="container">
+      <h2>Luxurious Necklaces</h2>
+      <p>
+        Handcrafted gold and platinum chains with bespoke pendants featuring
+        pearls, rubies, and diamonds—designed to be heirlooms.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <img src="images/necklace1.jpg" alt="Pearl Embrace" />
+          <h3>Pearl Embrace</h3>
+        </div>
+        <div class="card">
+          <img src="images/necklace2.jpg" alt="Ruby Radiance" />
+          <h3>Ruby Radiance</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elegant Bracelets -->
+  <section id="bracelets" class="section">
+    <div class="container">
+      <h2>Elegant Bracelets</h2>
+      <p>
+        From delicate bangles to statement cuffs, each bracelet is handcrafted
+        in gold and platinum, often inlaid with rare gemstones.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <img src="images/bracelet1.jpg" alt="Bangle Grace" />
+          <h3>Bangle Grace</h3>
+        </div>
+        <div class="card">
+          <img src="images/bracelet2.jpg" alt="Cuff Chic" />
+          <h3>Cuff Chic</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Azza Jewels. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+  </script>
+</body>
+</html>
