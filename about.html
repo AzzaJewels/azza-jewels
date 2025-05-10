@@ -11,7 +11,6 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="style.css" />
-  <!-- In your <head> on index.html, about.html, collections.html, etc. -->
   <link rel="icon" type="image/png" href="images/logo.png"/>
 </head>
 <body>
@@ -21,6 +20,7 @@
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Azza Jewels Logo" />
       </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About &amp; Timeline</a></li>
@@ -28,48 +28,55 @@
         <li><a href="mission.html">Mission &amp; Vision</a></li>
         <li><a href="contact.html" class="btn">Contact</a></li>
       </ul>
-      <button class="nav-toggle">☰</button>
     </div>
   </nav>
 
-    <!-- About Section -->
-    <section class="section about">
-      <div class="container">
-  
-        <!-- New Image Row -->
-        <div class="about-images">
-          <img src="images/oman_heritage.jpg" alt="Omani Heritage Workshop" class="about-img" />
-        </div>
-  
-        <h2>About Azza Jewels &amp; Mr. Chetan Shah</h2>
-        <p>
-          Azza Jewels is a premier luxury jewelry house founded by Mr. Chetan Shah,
-          a seasoned entrepreneur with three decades of expertise. From expanding
-          India’s Maa Padma Exports &amp; Shri Pannalal Jewellers to launching
-          Cambay Gold FZE in Sharjah, his vision has always fused heritage with innovation.
-        </p>
-        <h3>Legacy in India</h3>
-        <p>
-          Under his leadership, exports surpassed ₹10 billion annually, generating
-          €450 million between 2017–2022 through strategic collaborations and
-          world-class craftsmanship.
-        </p>
-        <h3>Global Expansion</h3>
-        <p>
-          Settling in the UAE, he founded Cambay Gold FZE—leveraging Dubai’s
-          infrastructure to deliver exquisite designs worldwide.
-        </p>
-        <h3>Current Ventures</h3>
-        <p>
-          Now at the helm of Kanak Gold, he continues to elevate quality and drive
-          operational excellence in the global jewellery sector.
-        </p>
-      </div>
+  <!-- About Section -->
+  <section class="section about">
+    <div class="container">
+      <!-- Heritage Image -->
       <div class="about-images">
-        <img src="images/oman_location.jpg" alt="Location of Our Facility in Oman" class="about-img" style="width: 300px; height: auto;" />
+        <img src="images/oman_heritage.jpg"
+             alt="Omani Heritage Workshop"
+             class="about-img" />
       </div>
-    </section>
-  
+
+      <h2>About Azza Jewels &amp; Mr. Chetan Shah</h2>
+      <p>
+        Azza Jewels is a premier luxury jewelry house founded by Mr. Chetan Shah,
+        a seasoned entrepreneur with three decades of expertise. From expanding
+        India’s Maa Padma Exports &amp; Shri Pannalal Jewellers to launching
+        Cambay Gold FZE in Sharjah, his vision has always fused heritage with innovation.
+      </p>
+
+      <h3>Legacy in India</h3>
+      <p>
+        Under his leadership, exports surpassed ₹10 billion annually, generating
+        ₹450 million between 2017–2022 through strategic collaborations and
+        world-class craftsmanship.
+      </p>
+
+      <h3>Global Expansion</h3>
+      <p>
+        Settling in the UAE, he founded Cambay Gold FZE—leveraging Dubai’s
+        infrastructure to deliver exquisite designs worldwide.
+      </p>
+
+      <h3>Current Ventures</h3>
+      <p>
+        Now at the helm of Kanak Gold, he continues to elevate quality and drive
+        operational excellence in the global jewellery sector.
+      </p>
+    </div>
+
+    <!-- Location Image -->
+    <div class="about-images">
+      <img src="images/oman_location.jpg"
+           alt="Location of Our Facility in Oman"
+           class="about-img"
+           style="width: 300px; height: auto;" />
+    </div>
+  </section>
 
   <!-- Full Timeline -->
   <section class="section timeline">
@@ -80,21 +87,31 @@
           <span class="marker"></span>
           <div>
             <h4>1998</h4>
-            <p>Began fine metals trading in the Middle East.</p>
+            <p>Began career trading fine metals across the Middle East.</p>
           </div>
         </div>
         <div class="item">
           <span class="marker"></span>
           <div>
             <h4>2006</h4>
-            <p>Founded first manufacturing unit in India.</p>
+            <p>Founded first jewellery manufacturing unit in India.</p>
           </div>
         </div>
         <div class="item">
           <span class="marker"></span>
           <div>
             <h4>2015</h4>
-            <p>Launched Azza Jewels, merging heritage with technology.</p>
+            <p>Launched Azza Jewels, merging heritage with cutting-edge technology.</p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="marker"></span>
+          <div>
+            <h4>2017–2022</h4>
+            <p>
+              Led exports of ₹115.5 billion and generated ₹450 million in revenue
+              with Maa Padma Exports &amp; Shri Pannalal Jewellers.
+            </p>
           </div>
         </div>
         <div class="item">
@@ -102,6 +119,30 @@
           <div>
             <h4>2022</h4>
             <p>Expanded to a 12,000 sq ft facility in Oman.</p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="marker"></span>
+          <div>
+            <h4>2023</h4>
+            <p>Established Cambay Gold FZE in Sharjah, UAE, to expand global reach.</p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="marker"></span>
+          <div>
+            <h4>2024</h4>
+            <p>Assumed management of Kanak Gold, strengthening its market leadership.</p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="marker"></span>
+          <div>
+            <h4>2025 – Present</h4>
+            <p>
+              Azza Jewels operates from its state-of-the-art Oman facility,
+              continually crafting new masterpieces for clients worldwide.
+            </p>
           </div>
         </div>
       </div>
@@ -116,9 +157,13 @@
   </footer>
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
-    });
+    document
+      .querySelector('.nav-toggle')
+      .addEventListener('click', () => {
+        document
+          .querySelector('.nav-menu')
+          .classList.toggle('nav-menu_visible');
+      });
   </script>
 </body>
 </html>
