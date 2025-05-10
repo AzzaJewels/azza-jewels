@@ -94,7 +94,7 @@ p {
 }
 
 .logo img {
-  height: 40px;
+  height: 30px;
 }
 
 .nav-menu {
@@ -171,7 +171,7 @@ p {
 }
 
 .hero-logo {
-  height:      80px;
+  height:      60px;
   margin-bottom: 1em;
   transform:   scale(0.9);
   animation:   fadeIn 1.2s ease forwards;
