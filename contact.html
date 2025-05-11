@@ -20,7 +20,6 @@
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Azza Jewels Logo" />
       </a>
-      <!-- Make the branding clickable -->
       <a href="index.html" class="branding">
         <h1 class="site-title">Azza Jewels</h1>
         <p class="site-tagline">The Sparkle of Oman</p>
@@ -49,11 +48,11 @@
         <button class="btn" type="submit">Send Message</button>
       </form>
 
-      <!-- Get in Touch & Address Sections -->
-      <div class="contact-sections slide-in-up" style="animation-delay:0.2s;">
+      <!-- Address & “Get in Touch” Cards -->
+      <div class="contact-sections">
         <!-- Address & Directions -->
         <div class="contact-section address-section">
-          <h3 class="company-name">Azza Jewels</h3>
+          <h3>Azza Jewels</h3>
           <h4 class="unit-name">Manufacturing Unit</h4>
           <address>
             Area: Muttrah-Darsait<br/>
@@ -63,7 +62,7 @@
             Sultanate of Oman
           </address>
           <a
-            href="https://www.google.com/maps/dir/?api=1&destination=23.617194,58.546055"
+            href="https://maps.google.com/maps?q=23.617194,58.546055&z=17&output=embed"
             target="_blank"
             rel="noopener"
             class="btn directions-btn"
@@ -71,23 +70,26 @@
             Get Directions
           </a>
         </div>
-          <!-- Get in Touch -->
-          <div class="contact-section get-in-touch">
-            <h3>Get in Touch</h3>
-            <p><strong>Phone:</strong> <a href="tel:+96876765551">+968 7676 5551</a></p>
-            <p><strong>Email:</strong> <a href="mailto:info@azzajewels.com">info@azzajewels.com</a></p>
-          </div>
 
-        <!-- Map Embed -->
-        <div class="map-container slide-in-up" style="animation-delay:0.4s;">
-          <iframe
-            src="https://maps.google.com/maps?q=23.617194,58.546055&z=17&output=embed"
-            frameborder="0"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+        <!-- Get in Touch -->
+        <div class="contact-section get-in-touch">
+          <h3>Get in Touch</h3>
+          <p><strong>Phone:</strong> <a href="tel:+96876765551">+968 7676 5551</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@azzajewels.com">info@azzajewels.com</a></p>
         </div>
-  
+      </div>
+
+      <!-- Map Embed -->
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=23.617194,58.546055&z=17&output=embed"
+          frameborder="0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -97,13 +99,10 @@
   </footer>
 
   <script>
-    document
-      .querySelector('.nav-toggle')
-      .addEventListener('click', () => {
-        document
-          .querySelector('.nav-menu')
-          .classList.toggle('nav-menu_visible');
-      });
+    // Mobile menu toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
   </script>
 </body>
 </html>

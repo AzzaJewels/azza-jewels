@@ -352,6 +352,40 @@ p {
   color: #9c7a2e;
 }
 
+/* Core Values Section Padding */
+.core-values {
+  padding: 6rem 0; /* increase top/bottom spacing if needed */
+}
+
+/* Adjust the grid gap for more space between cards */
+.core-values .grid {
+  gap: 3rem; /* up from 2rem */
+}
+
+/* Increase internal padding on each card */
+.core-values .card {
+  padding: 2rem 1.5rem; /* more top/bottom and left/right padding */
+}
+
+/* Optionally, reduce max-width on images so text has room */
+.core-values .card img {
+  max-width: 120px; /* or whatever feels balanced */
+  margin-bottom: 1rem;
+}
+.team-email {
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  margin: 0.5rem 0;
+}
+
+.team-statement {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+
 /*=============================================
 =               Timeline Styles               =
 =============================================*/
@@ -1905,4 +1939,19 @@ html, body {
       display: block;
     }
   }
-  
+ /* Golden glow around each card */
+.card {
+  /* keep your existing box-shadow */
+  box-shadow: 
+    0 4px 12px rgba(0,0,0,0.08),      /* your normal shadow */
+    0 0 12px rgba(183,145,56,0.4);     /* soft gold glow */
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+/* Intensify the glow on hover */
+.card:hover {
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.12),
+    0 0 20px rgba(183,145,56,0.6);
+  transform: translateY(-5px);
+}
