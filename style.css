@@ -1251,3 +1251,86 @@ body.careers .card:hover {
     margin-bottom: 1.5rem;
   }
 }
+
+/*=============================================
+=          Team Carousel Section             =
+=============================================*/
+.team-carousel-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Hide scrollbar in most browsers */
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.team-card {
+  min-width: 220px;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  flex-shrink: 0;
+  padding: 1rem;
+}
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+.team-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.1rem;
+  color: var(--color-dark);
+}
+.team-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Nav buttons */
+.carousel-btn {
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: background var(--transition);
+}
+.carousel-btn:hover {
+  background: rgba(255,255,255,1);
+}
+.prev-btn { left: -1rem; }
+.next-btn { right: -1rem; }
+
+@media (max-width: 768px) {
+  .prev-btn, .next-btn { display: none; }
+}
