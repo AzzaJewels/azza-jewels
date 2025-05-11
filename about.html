@@ -23,7 +23,7 @@
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About &amp; Timeline</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="collections.html">Collections</a></li>
         <li><a href="mission.html">Mission &amp; Vision</a></li>
         <li><a href="contact.html" class="btn">Contact</a></li>
@@ -31,10 +31,9 @@
     </div>
   </nav>
 
-  <!-- About Section -->
+  <!-- About & Founder Section -->
   <section class="section about">
     <div class="container">
-      <!-- Heritage Image -->
       <div class="about-images">
         <img src="images/oman_heritage.jpg"
              alt="Omani Heritage Workshop"
@@ -49,101 +48,129 @@
         Cambay Gold FZE in Sharjah, his vision has always fused heritage with innovation.
       </p>
 
-      <h3>Legacy in India</h3>
+      <h3 style="padding-top: 1.5rem;">Legacy in India</h3>
       <p>
         Under his leadership, exports surpassed ₹10 billion annually, generating
         ₹450 million between 2017–2022 through strategic collaborations and
         world-class craftsmanship.
       </p>
 
-      <h3>Global Expansion</h3>
+      <h3 style="padding-top: 1.5rem;">Global Expansion</h3>
       <p>
         Settling in the UAE, he founded Cambay Gold FZE—leveraging Dubai’s
         infrastructure to deliver exquisite designs worldwide.
       </p>
 
-      <h3>Current Ventures</h3>
+      <h3 style="padding-top: 1.5rem;">Current Ventures</h3>
       <p>
         Now at the helm of Kanak Gold, he continues to elevate quality and drive
         operational excellence in the global jewellery sector.
       </p>
-    </div>
 
-    <!-- Location Image -->
-    <div class="about-images">
-      <img src="images/oman_location.jpg"
-           alt="Location of Our Facility in Oman"
-           class="about-img"
-           style="width: 300px; height: auto;" />
+      <div class="about-images">
+        <img src="images/oman_location.jpg"
+             alt="Location of Our Facility in Oman"
+             class="about-img"
+             style="width:300px;"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission/Vision Banner with Video Background -->
+  <section class="section mission-banner">
+    <video class="banner-video" autoplay muted loop playsinline>
+      <source src="videos/vision.mp4" type="video/mp4" />
+      <!-- fallback image if video unsupported -->
+      <img src="images/mission_banner_fallback.jpg" alt="Mission & Vision" />
+    </video>
+    <div class="banner-overlay"></div>
+    <div class="container banner-content text-center">
+      <h2>Our Mission &amp; Vision</h2>
+      <p style="color: #fff;">Guiding every creation with purpose, passion, and a promise of timeless elegance.</p>
+    </div>
+  </section>
+  
+  <!-- Mission & Vision Panels -->
+  <section class="section mission-vision">
+    <div class="container grid">
+      <div class="card slide-in-left" style="animation-delay:0.2s;">
+        <h2>Our Mission</h2>
+        <p>
+          To honor centuries-old jewellery heritage by crafting bespoke luxury pieces
+          that marry ethical sourcing with unparalleled artistry, enriching every
+          wearer’s story.
+        </p>
+      </div>
+      <div class="card slide-in-right" style="animation-delay:0.4s;">
+        <h2>Our Vision</h2>
+        <p>
+          To be the world’s most admired jewellery house—renowned for innovation,
+          sustainability, and emotional connection—shaping the future of luxury
+          one masterpiece at a time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="section">
+    <div class="container">
+      <h2 class="slide-in-down">Our Core Values</h2>
+      <div class="grid">
+        <div class="card fade-in-up" style="animation-delay: 0.2s;">
+          <img src="images/factory.jpg" alt="Craftsmanship Icon" />
+          <h3>Craftsmanship</h3>
+          <p>Meticulous hand-finishing ensures each piece is a work of art.</p>
+        </div>
+        <div class="card fade-in-up" style="animation-delay: 0.4s;">
+          <img src="images/sustainable.jpeg" alt="Sustainability Icon" />
+          <h3>Sustainability</h3>
+          <p>Ethical materials and green processes protect our planet and people.</p>
+        </div>
+        <div class="card fade-in-up" style="animation-delay: 0.6s;">
+          <img src="images/innovation.jpeg" alt="Innovation Icon" />
+          <h3>Innovation</h3>
+          <p>Blending tradition with cutting-edge techniques to push design boundaries.</p>
+        </div>
+        <div class="card fade-in-up" style="animation-delay: 0.8s;">
+          <img src="images/customer.jpeg" alt="Customer-Centric Icon" />
+          <h3>Customer-Centric</h3>
+          <p>Personalized experiences that make each client feel uniquely celebrated.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Full Timeline -->
   <section class="section timeline">
     <div class="container">
-      <h2>Our Journey</h2>
+      <h2 style = "background:#f9f9f9 url('images/timeline-bg.jpg') center/cover;">Our Journey</h2>
       <div class="timeline">
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>1998</h4>
-            <p>Began career trading fine metals across the Middle East.</p>
+        <div class="item"><span class="marker"></span>
+          <div><h4>1998</h4><p>Began career trading fine metals across the Middle East.</p></div>
+        </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2006</h4><p>Founded first jewellery manufacturing unit in India.</p></div>
+        </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2015</h4><p>Launched Azza Jewels, merging heritage with cutting-edge technology.</p></div>
+        </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2017–2022</h4>
+            <p>Led exports of ₹115.5 bn and generated ₹450 m in revenue with Maa Padma Exports &amp; Shri Pannalal Jewellers.</p>
           </div>
         </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2006</h4>
-            <p>Founded first jewellery manufacturing unit in India.</p>
-          </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2022</h4><p>Expanded to a 12,000 sq ft facility in Oman.</p></div>
         </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2015</h4>
-            <p>Launched Azza Jewels, merging heritage with cutting-edge technology.</p>
-          </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2023</h4><p>Established Cambay Gold FZE in Sharjah, UAE.</p></div>
         </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2017–2022</h4>
-            <p>
-              Led exports of ₹115.5 billion and generated ₹450 million in revenue
-              with Maa Padma Exports &amp; Shri Pannalal Jewellers.
-            </p>
-          </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2024</h4><p>Assumed management of Kanak Gold, strengthening market leadership.</p></div>
         </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2022</h4>
-            <p>Expanded to a 12,000 sq ft facility in Oman.</p>
-          </div>
-        </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2023</h4>
-            <p>Established Cambay Gold FZE in Sharjah, UAE, to expand global reach.</p>
-          </div>
-        </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2024</h4>
-            <p>Assumed management of Kanak Gold, strengthening its market leadership.</p>
-          </div>
-        </div>
-        <div class="item">
-          <span class="marker"></span>
-          <div>
-            <h4>2025 – Present</h4>
-            <p>
-              Azza Jewels operates from its state-of-the-art Oman facility,
-              continually crafting new masterpieces for clients worldwide.
-            </p>
-          </div>
+        <div class="item"><span class="marker"></span>
+          <div><h4>2025 – Present</h4><p>Azza Jewels operates from its state-of-the-art Oman facility, continuously crafting masterpieces for clients worldwide.</p></div>
         </div>
       </div>
     </div>
@@ -152,18 +179,18 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Azza Jewels. All rights reserved.</p>
+      <p style="color: #fff;">© 2025 Azza Jewels. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
     document
       .querySelector('.nav-toggle')
-      .addEventListener('click', () => {
+      .addEventListener('click', () =>
         document
           .querySelector('.nav-menu')
-          .classList.toggle('nav-menu_visible');
-      });
+          .classList.toggle('nav-menu_visible')
+      );
   </script>
 </body>
 </html>
