@@ -93,11 +93,16 @@
   </header>
   
     <!-- Carat Banner -->
-    <section class="banner slide-in-up">
-      <div class="container">
-        <h2>Crafting Jewellery in Oman in 18, 21 &amp; 22 Carats</h2>
-      </div>
-    </section>
+  <section class="banner slide-in-up">
+    <div class="container">
+      <h2>Crafting Jewellery in Oman in 18, 21 &amp; 22 Carats</h2>
+      <!-- NEW: View Collections Button -->
+      <a href="collections.html" class="btn" style="margin-top:1rem;">
+        View Collections
+      </a>
+    </div>
+  </section>
+
   
     <!-- Craftsmanship Highlight -->
     <section class="section craftsmanship">
@@ -163,38 +168,31 @@
       <p style="color: #fff;">© 2025 Azza Jewels. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
-    });
-  </script>
-  <!-- at the very end of your <body> -->
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Your custom JS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Hero slider
+      // 1) Initialize the Hero Swiper
       new Swiper('.myHeroSwiper', {
-        containerModifierClass: 'swiper-', // default
-        wrapperClass: 'swiper-wrapper',
-        slideClass: 'swiper-slide',
         loop: true,
         speed: 800,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
         },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
       });
 
-      // Mobile menu toggle (only once)
-      document.querySelector('.nav-toggle').addEventListener('click', () => {
-        document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+      // 2) Mobile menu toggle
+      const toggleBtn = document.querySelector('.nav-toggle');
+      const menu     = document.querySelector('.nav-menu');
+      toggleBtn.addEventListener('click', () => {
+        menu.classList.toggle('nav-menu_visible');
       });
     });
   </script>

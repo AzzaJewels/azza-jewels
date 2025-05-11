@@ -1,17 +1,5 @@
 /* style.css */
-/* Header site title */
-.site-title {
-    font-family:    var(--font-serif);
-    font-size:      1.5rem;
-    font-weight:    700;
-    margin-right:   2rem;
-    color:          var(--color-dark);
-  }
-  .nav .container {
-    display:        flex;
-    align-items:    center;
-  }
-  
+
 /*=============================================
 =            Import Google Fonts              =
 =============================================*/
@@ -65,6 +53,19 @@ h1, h2, h3, h4, h5, h6 {
 p {
   line-height: 1.6;
   color:       #333;
+}
+
+/* Header site title */
+.site-title {
+  font-family:    var(--font-serif);
+  font-size:      1.5rem;
+  font-weight:    700;
+  margin-right:   2rem;
+  color:          var(--color-dark);
+}
+.nav .container {
+  display:        flex;
+  align-items:    center;
 }
 
 /*=============================================
@@ -1857,3 +1858,32 @@ html, body {
   margin: 0;
   padding: 0;
 }
+/* ————————————————————
+   Mobile nav collapse
+   ———————————————————— */
+   @media (max-width: 768px) {
+    /* hide by default */
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: #fff;
+      width: 220px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+  
+    /* show when we add the visible class */
+    .nav-menu.nav-menu_visible {
+      display: flex;
+    }
+  
+    /* make the burger button visible */
+    .nav-toggle {
+      display: block;
+    }
+  }
+  
