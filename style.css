@@ -1,5 +1,17 @@
 /* style.css */
-
+/* Header site title */
+.site-title {
+    font-family:    var(--font-serif);
+    font-size:      1.5rem;
+    font-weight:    700;
+    margin-right:   2rem;
+    color:          var(--color-dark);
+  }
+  .nav .container {
+    display:        flex;
+    align-items:    center;
+  }
+  
 /*=============================================
 =            Import Google Fonts              =
 =============================================*/
@@ -768,3 +780,474 @@ p.collections {
     margin: 2rem auto 0;      /* 2rem top spacing, auto left/right centering */
   }
   
+  /* Carat Banner: white background + shadow */
+.banner {
+    background:      #fff;
+    color:           var(--color-dark);
+    text-align:      center;
+    padding:         2.5em 0;
+    box-shadow:      0 4px 16px rgba(0,0,0,0.08);
+    border-radius:   0.5em;
+    margin:          2em 1em;     /* add some outside breathing room */
+  }
+  .banner h2,
+  .banner p {
+    max-width:       800px;
+    margin:          0 auto;
+  }
+  .banner h2 {
+    font-family:     var(--font-serif);
+    font-size:       2rem;
+    margin-bottom:   0.5em;
+  }
+  .banner p {
+    font-size:       1.1rem;
+    opacity:         0.8;
+  }
+  
+  /* Thank You Note */
+.thank-you {
+    text-align:     center;
+    font-style:     italic;
+    margin:         0 0 1.5rem;
+    color:          var(--color-dark);
+    opacity:        0.85;
+    font-size:      1rem;
+  }
+  /* Extra padding around the panels */
+.padded-section {
+    padding: 6rem 0;
+  }
+  
+  /* Centered two-column grid with gap */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    align-items: start;
+  }
+  
+  /* Card styling for Mission/Vision */
+  .mission-card {
+    background: #fafafa;
+    padding: 2.5rem 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform var(--transition), box-shadow var(--transition);
+  }
+  .mission-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  }
+  
+  .mission-card h2 {
+    margin-bottom: 1rem;
+  }
+  .mission-card p {
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  /* Global Reach & FTAs */
+.fta-section {
+    background: #fafafa;
+    padding: 6rem 0;
+  }
+  
+  .fta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  .fta-grid .card {
+    background: #fff;
+    padding: 1.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  
+  .fta-grid .card h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: var(--color-accent);
+  }
+  
+  .fta-grid .card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .fta-grid .card ul {
+    margin: 0.5rem 0 0 1.25rem;
+    list-style: disc;
+    color: #444;
+  }
+  
+  .impact-outro {
+    max-width: 700px;
+    margin: 2rem auto 0;
+    text-align: center;
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+  /* Our Commitment Section */
+.commitment {
+    background:    #fafafa;
+    padding:       6rem 0;
+  }
+  
+  .commitment h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .commitment p {
+    max-width:     700px;
+    margin:        0 auto 2rem;
+    font-size:     1.1rem;
+    line-height:   1.6;
+    color:         #444;
+  }
+  
+  .commitment-list {
+    max-width:     800px;
+    margin:        0 auto;
+    list-style:    disc inside;
+    line-height:   1.8;
+    color:         #333;
+  }
+  
+  .commitment-list li {
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .commitment {
+      padding: 4rem 0;
+    }
+  }
+  
+ /*=============================================
+=         Contact & Location Section Styles   =
+=============================================*/
+
+/* Center and size the form */
+.contact-form {
+    max-width:    600px;
+    margin:       0 auto 1.5rem;
+  }
+  
+  /* Stack the contact cards vertically, center and size them */
+  .contact-sections {
+    display:            grid;
+    grid-template-columns: 1fr;
+    gap:                1.5rem;
+    max-width:          600px;
+    margin:             0 auto 2rem;
+  }
+  
+  /* Ensure each card’s content is centered */
+  .contact-section {
+    background:    #fff;
+    padding:       1.5rem;
+    border-radius: 0.5rem;
+    box-shadow:    0 4px 12px rgba(0,0,0,0.08);
+    text-align:    center;
+  }
+  
+  /* “Get in Touch” card heading */
+  .get-in-touch h3 {
+    font-family:   var(--font-serif);
+    font-size:     1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Phone and email links */
+  .get-in-touch p {
+    font-size:     1rem;
+    margin-bottom: 0.5rem;
+  }
+  .get-in-touch a {
+    color:         var(--color-accent);
+    text-decoration: underline;
+  }
+  
+  /* Company name and unit subtitle */
+  .address-section h3 {
+    font-family:   var(--font-serif);
+    font-size:     2rem;
+    margin-bottom: 0.25rem;
+  }
+  .address-section .unit-name {
+    font-size:     1rem;
+    color:         #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Address block styling */
+  .address-section address {
+    font-style:    normal;
+    line-height:   1.6;
+    color:         #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Directions button inside address card */
+  .directions-btn {
+    display:       inline-block;
+    background:    var(--color-accent);
+    color:         #fff;
+    padding:       0.75em 1.5em;
+    font-size:     1rem;
+    border-radius: 0.25em;
+    transition:    opacity var(--transition), transform var(--transition);
+  }
+  .directions-btn:hover {
+    opacity:       0.85;
+    transform:     translateY(-2px);
+  }
+  
+  /* Center and size the map */
+  .map-container {
+    max-width:          600px;
+    margin:             1.5rem auto 0;
+    width:              100%;
+    height:             0;
+    padding-bottom:     56.25%; /* 16:9 ratio */
+    position:           relative;
+  }
+  .map-container iframe {
+    position:           absolute;
+    top:                0;
+    left:               0;
+    width:              100%;
+    height:             100%;
+    border-radius:      0.5em;
+    box-shadow:         0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /*=============================================
+=        Careers Page – Spacing Overrides     =
+=============================================*/
+
+body.careers .hero.hero-compact {
+  padding-top:    4rem;    /* more space above text */
+  padding-bottom: 2.5rem;  /* space under the banner */
+}
+
+body.careers .section {
+  padding-top:    5rem;    /* lift every section down */
+  padding-bottom: 5rem;    /* more room below each section */
+}
+
+body.careers .section + .section {
+  margin-top:     2rem;    /* extra gap between back-to-back sections */
+}
+
+body.careers .grid {
+  gap:            3rem;    /* wider spacing between cards */
+}
+body.careers .card {
+  padding:       2rem 1.5rem;   /* top/bottom 2rem, left/right 1.5rem */
+  border-radius: 0.5rem;        /* keep corners soft */
+  transition:    transform var(--transition), box-shadow var(--transition);
+}
+
+body.careers .card:hover {
+  transform:     translateY(-3px);
+  box-shadow:    0 12px 28px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 768px) {
+  body.careers .hero.hero-compact {
+    padding-top:    3rem;
+    padding-bottom: 1.5rem;
+  }
+  body.careers .section {
+    padding-top:    3rem;
+    padding-bottom: 3rem;
+  }
+  body.careers .grid {
+    gap:            1.5rem;
+  }
+}
+
+/*=============================================
+=         Gratitude Section Styling           =
+=============================================*/
+.gratitude-section {
+  background:      #fff;
+  padding:         3rem 1rem;
+  margin:          3rem 0;
+  border-radius:   0.5rem;
+  box-shadow:      0 8px 24px rgba(0,0,0,0.1);
+}
+
+.gratitude-section h2 {
+  font-family:    var(--font-serif);
+  font-size:      2rem;
+  margin-bottom:  1.5rem;
+  color:          var(--color-dark);
+}
+
+.gratitude-section .about-images {
+  margin-bottom:  1.5rem;
+}
+
+.gratitude-section .thank-you {
+  max-width:      700px;
+  margin:         0 auto;
+  font-style:     italic;
+  line-height:    1.6;
+  color:          #444;
+  opacity:        0.9;
+  font-size:      1rem;
+}
+
+/*=============================================
+=            Our Portfolio Section            =
+=============================================*/
+.portfolio {
+  background:    #fafafa;
+  padding:       6rem 0;
+}
+
+.portfolio h2 {
+  text-align:    center;
+  font-size:     2.5rem;
+  margin-bottom: 1rem;
+  color:         var(--color-dark);
+}
+
+.portfolio p {
+  max-width:     700px;
+  margin:        0 auto 2rem;
+  text-align:    center;
+  font-size:     1.1rem;
+  line-height:   1.6;
+  opacity:       0.9;
+  color:         #444;
+}
+
+/* Grid container for portfolio categories */
+.portfolio-categories.grid {
+  display:            grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:                2.5rem;
+  margin-top:         2rem;
+}
+
+/* Individual category card */
+.portfolio-item {
+  background:         #fff;
+  border-radius:      0.5rem;
+  box-shadow:         0 4px 12px rgba(0,0,0,0.08);
+  padding:            2rem 1.5rem;
+  text-align:         center;
+  transition:         transform var(--transition), box-shadow var(--transition);
+}
+
+.portfolio-item:hover {
+  transform:          translateY(-4px);
+  box-shadow:         0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Category title */
+.portfolio-item h3 {
+  font-family:        var(--font-serif);
+  font-size:          1.5rem;
+  margin-bottom:      0.75rem;
+  color:              var(--color-dark);
+}
+
+/* Category description */
+.portfolio-item p {
+  font-size:          0.95rem;
+  line-height:        1.6;
+  margin-bottom:      1rem;
+  color:              #555;
+  text-align: center;
+
+}
+
+/* Portfolio images – slightly smaller for balance */
+.portfolio-img {
+  display: block;
+  margin: 1rem auto 0;
+  width: 80%;            /* shrink from 100% to 80% */
+  max-width: 220px;      /* cap the absolute size */
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .portfolio-categories.grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-item {
+    padding:        1.5rem 1rem;
+  }
+}
+
+/*=============================================
+=                Gallery Styles               =
+=============================================*/
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+/* Back-to-Collections Button */
+.back-button {
+  margin-top: 1.5rem;
+}
+.back-button .btn {
+  font-size:      0.95rem;
+  padding:        0.6em 1.2em;
+}
+
+/*=============================================
+=      Responsive Portfolio Intro Paragraph   =
+=============================================*/
+.portfolio > .container > p {
+  /* Center and constrain width */
+  max-width:      800px;     /* won’t grow beyond this */
+  width:          90%;       /* but will shrink on smaller viewports */
+  margin:         0 auto 2rem;/* centered with bottom gap */
+
+  /* Responsive font size */
+  font-size:      clamp(1rem, 2.5vw, 1.125rem);
+  line-height:    1.6;
+  color:          #444;
+  opacity:        0.9;
+  text-align:     center;
+}
+
+/* Small tweaks on very small screens */
+@media (max-width: 480px) {
+  .portfolio > .container > p {
+    width:       95%;
+    margin-bottom: 1.5rem;
+  }
+}

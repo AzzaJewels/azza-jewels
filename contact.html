@@ -20,12 +20,15 @@
       <a href="index.html" class="logo">
         <img src="images/logo.png" alt="Azza Jewels Logo" />
       </a>
+      <h1 class="site-title">Azza Jewels</h1>
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="collections.html">Collections</a></li>
         <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
       </ul>
     </div>
   </nav>
@@ -40,16 +43,39 @@
         <textarea rows="5" placeholder="Your Message" required></textarea>
         <button class="btn" type="submit">Send Message</button>
       </form>
-    </div>
-  </section>
 
-  <!-- Location Embed & Address -->
-  <section class="section location">
-    <div class="container">
-      <h2>Our Location</h2>
+      <!-- Get in Touch & Address Sections -->
+      <div class="contact-sections slide-in-up" style="animation-delay:0.2s;">
+        <!-- Get in Touch -->
+        <div class="contact-section get-in-touch">
+          <h3>Get in Touch</h3>
+          <p><strong>Phone:</strong> <a href="tel:+96876765551">+968 7676 5551</a></p>
+          <p><strong>Email:</strong> <a href="mailto:chetan@azzajewels.com">chetan@azzajewels.com</a></p>
+        </div>
+        <!-- Address & Directions -->
+        <div class="contact-section address-section">
+          <h3 class="company-name">Azza Jewels</h3>
+          <h4 class="unit-name">Manufacturing Unit</h4>
+          <address>
+            Area: Muttrah-Darsait<br/>
+            Building Number: 2015<br/>
+            Plot Number: 43<br/>
+            Way Number: 2625<br/>
+            Sultanate of Oman
+          </address>
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=Muttrah-Darsait,+Building+2015,+Plot+43,+Way+2625,+Sultanate+of+Oman"
+            target="_blank"
+            rel="noopener"
+            class="btn directions-btn"
+          >
+            Get Directions
+          </a>
+        </div>
+      </div>
 
-      <!-- Interactive map with pin at your address -->
-      <div class="map-container">
+      <!-- Map Embed -->
+      <div class="map-container slide-in-up" style="animation-delay:0.4s;">
         <iframe
           src="https://maps.google.com/maps?q=Muttrah-Darsait,+Building+2015,+Plot+43,+Way+2625,+Sultanate+of+Oman&z=17&output=embed"
           frameborder="0"
@@ -57,26 +83,10 @@
           loading="lazy"
         ></iframe>
       </div>
-
-      <address class="address">
-        <strong>Azza Jewels Factory & Showroom</strong><br />
-        Area: Muttrah-Darsait<br />
-        Building Number: 2015<br />
-        Plot Number: 43<br />
-        Way Number: 2625<br />
-        Sultanate of Oman<br />
-        <a
-          href="https://www.google.com/maps/dir/?api=1&destination=Muttrah-Darsait,+Building+2015,+Plot+43,+Way+2625,+Sultanate+of+Oman"
-          target="_blank"
-          rel="noopener"
-          class="directions-link"
-        >
-          <span class="pin-icon">📍</span>
-          Get Directions
-        </a>
-      </address>
     </div>
   </section>
+  
+  
 
   <!-- Footer -->
   <footer class="footer">

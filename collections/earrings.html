@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azza Jewels | Earrings</title>
+  <link rel="icon" href="images/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="category-page">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Azza Jewels Logo"/></a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+      </ul>
+      <button class="nav-toggle">☰</button>
+    </div>
+  </nav>
+
+<!-- Hero -->
+<header class="section">
+    <div class="container text-center">
+        <h1>Earrings Collection</h1>
+        <p>
+            Elevate every moment with our Earrings Collection—where centuries-old Omani
+            filigree meets contemporary grace. Each pair is painstakingly hand-wrought in
+            18K, 21K or 22K gold by master artisans, then crowned with responsibly sourced
+            diamonds, emeralds or sapphires. The result is a sublime harmony of light and
+            movement that frames the face with timeless beauty and uncompromising quality.
+          </p>
+          
+        <!-- Back Button -->
+        <div class="back-button">
+        <a href="collections.html" class="btn">&larr; Back to Collections</a>
+        </div>
+    </div>
+    </header>    
+
+  <!-- Gallery -->
+  <section class="section gallery">
+    <div class="container grid">
+      <div class="gallery-item"><img src="images/earring1.jpg" alt="Earring 1"/></div>
+      <div class="gallery-item"><img src="images/earring2.jpg" alt="Earring 2"/></div>
+      <div class="gallery-item"><img src="images/earring3.jpg" alt="Earring 3"/></div>
+      <div class="gallery-item"><img src="images/earring4.jpg" alt="Earring 4"/></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p style="color: #fff;">© 2025 Azza Jewels. All rights reserved.</p>
+  </footer>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', ()=> {
+      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+  </script>
+</body>
+</html>
