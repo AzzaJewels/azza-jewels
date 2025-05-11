@@ -1487,3 +1487,38 @@ body.careers .card:hover {
     margin-left: auto;
   }
 }
+/* Manufacturing & Stats Cards */
+.manufacturing-overview .card,
+.stats .card,
+.manufacturing-gallery .card {
+  background: #fff;
+  border-radius: 0.75rem;       /* softer corners */
+  padding: 1.5rem;              /* more breathing room */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+  border: 2px solid transparent;
+}
+
+/* Hover effect */
+.manufacturing-overview .card:hover,
+.stats .card:hover,
+.manufacturing-gallery .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+  border-color: var(--color-accent);
+}
+
+/* Optional: center content in gallery cards */
+.manufacturing-gallery .card img {
+  display: block;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+}
+
+/* Slight variation for stats numbers */
+.stats .card h3 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
