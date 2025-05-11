@@ -1639,3 +1639,112 @@ body.careers .card:hover {
   flex-grow: 1;                /* push content to bottom if shorter */
   line-height: 1.5;
 }
+
+/*=============================================
+=            Hero Slider Overrides            =
+=============================================*/
+
+/* 1) Resize the hero-slider to 80% of the viewport */
+.hero-slider {
+  position: relative;
+  height: 80vh !important;
+  max-height: 80vh !important;
+  overflow: hidden;
+}
+
+/* 2) Ensure the Swiper container, wrapper and slides fill 100% of that 80vh */
+.hero-slider .swiper-container,
+.hero-slider .swiper,
+.hero-slider .swiper-wrapper,
+.hero-slider .swiper-slide {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 3) Make every video or image stretch & cover */
+.hero-slider .hero-slide-media,
+.hero-slider .swiper-slide video,
+.hero-slider .swiper-slide img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* 4) Overlay sits above slides for contrast */
+.hero-slider .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5 !important;
+}
+
+/* 5) Centered hero text above overlay */
+.hero-slider .hero-content {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10 !important;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* 6) Pagination dots always on top and larger */
+.hero-slider .swiper-pagination {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  z-index: 12 !important;
+}
+
+.hero-slider .swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 5px !important;
+  background: rgba(255,255,255,0.85) !important;
+  opacity: 1 !important;
+  transition: transform 0.3s;
+}
+
+.hero-slider .swiper-pagination-bullet-active {
+  background: #fff !important;
+  transform: scale(1.4) !important;
+}
+
+/* 7) Mobile tweak: reduce height so header/nav remains visible */
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 60vh !important;
+  }
+}
+/*=============================================
+=              Hero‐Slider Fixes              =
+=============================================*/
+
+/* Remove the default .section padding on the hero slider */
+.hero-slider,
+.hero-slider.section {
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+}
+
+/* Make sure the very next section (your banner) sits flush below */
+.hero-slider + .banner {
+  margin-top: 0 !important;
+}
+
+/* Ensure the swiper container itself has no extra background */
+.hero-slider .swiper-container {
+  background: transparent !important;
+}
+
+/* If you’re still seeing space at the very top or bottom, */
+html, body {
+  margin: 0;
+  padding: 0;
+}

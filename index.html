@@ -12,6 +12,12 @@
   />
   <link rel="icon" type="image/png" href="images/logo.png"/>
   <link rel="stylesheet" href="style.css" />
+  <!-- Swiper CSS -->
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@10/swiper-bundle.min.css"
+  />
+
 </head>
 <body>
   <!-- Navigation -->
@@ -37,17 +43,37 @@
     </div>
   </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-      <video class="hero-video" autoplay muted loop>
-        <source src="videos/jewelry_bg.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <!-- slide in -->
-        <p class="slide-in-up" style="color: #fff;">Anchored in Oman, Adored Worldwide</p>        
+  <!-- Hero Slider -->
+  <header class="section hero-slider">
+    <div class="swiper-container myHeroSwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Video -->
+        <div class="swiper-slide">
+          <video class="hero-slide-media" autoplay muted loop playsinline>
+            <source src="videos/jewelry_bg.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <!-- Slide 2: Image -->
+        <div class="swiper-slide">
+          <img src="images/hero1.jpg" alt="Master Artisans at Work" class="hero-slide-media" />
+        </div>
+        <!-- Slide 3: Image -->
+        <div class="swiper-slide">
+          <img src="images/hero2.jpg" alt="Exquisite Hand Finishing" class="hero-slide-media" />
+        </div>
       </div>
-    </header>
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Overlay & Text -->
+    <div class="overlay"></div>
+    <div class="hero-content text-center">
+      <p class="slide-in-up" style="animation-delay:0.2s; color:#fff;">
+        Anchored in Oman, Adored Worldwide
+      </p>
+    </div>
+  </header>
   
     <!-- Carat Banner -->
     <section class="banner slide-in-up">
@@ -127,5 +153,34 @@
       document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
     });
   </script>
+  <!-- at the very end of your <body> -->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Hero slider
+      new Swiper('.myHeroSwiper', {
+        containerModifierClass: 'swiper-', // default
+        wrapperClass: 'swiper-wrapper',
+        slideClass: 'swiper-slide',
+        loop: true,
+        speed: 800,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+      });
+
+      // Mobile menu toggle (only once)
+      document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+      });
+    });
+  </script>
+
 </body>
 </html>
