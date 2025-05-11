@@ -106,7 +106,7 @@ p {
 }
 
 .logo img {
-  height: 40px;
+  height: 60px;
 }
 
 .nav-menu {
@@ -1609,3 +1609,33 @@ body.careers .card:hover {
   z-index: 2;
 }
 
+/* Make all unique-grid cards equal height */
+.unique-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  align-items: stretch;        /* stretch all grid items to same height */
+}
+
+.unique-grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;                /* fill the grid cell */
+  padding: 1.5rem;
+}
+
+.unique-grid .card img {
+  max-width: 250px;
+  margin-bottom: 1rem;
+  align-self: center;
+}
+
+.unique-grid .card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.unique-grid .card p {
+  flex-grow: 1;                /* push content to bottom if shorter */
+  line-height: 1.5;
+}
