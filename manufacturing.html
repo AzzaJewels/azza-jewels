@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azza Jewels | Manufacturing</title>
+  <link rel="icon" href="images/logo.png" type="image/png"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="manufacturing-page">
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Azza Jewels Logo"/>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="manufacturing.html" class="active">Manufacturing</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="careers.html">Careers</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="section hero hero-compact">
+    <div class="overlay"></div>
+    <div class="hero-content text-center">
+      <h1 class="slide-in-down">In-House Manufacturing</h1>
+      <p class="slide-in-up" style="animation-delay:0.3s;">
+        From design bench to polished masterpiece—every step under our roof
+      </p>
+    </div>
+  </header>
+
+  <!-- Overview -->
+  <section class="section manufacturing-overview">
+    <div class="container">
+      <h2 class="slide-in-down">Our State-of-the-Art Atelier</h2>
+      <p class="slide-in-up" style="animation-delay:0.2s;">
+        At Azza Jewels, we control every facet of creation in our 12,000 sq ft  
+        Muscat facility. From precision CAD modeling to hand-carving wax prototypes, 
+        castings, stone-setting, and finishing, our masters never leave their bench 
+        —ensuring the highest level of quality and accountability at every stage.
+      </p>
+    </div>
+  </section>
+
+  <!-- Artisan & Facility Stats -->
+  <section class="section stats">
+    <div class="container grid">
+      <div class="card fade-in-up" style="animation-delay:0.2s;">
+        <h3>50–60 Artisans</h3>
+        <p>
+          Each with decades of experience, our team includes master goldsmiths,
+          gem-setters, engravers, and polishers—all dedicated to perfection.
+        </p>
+      </div>
+      <div class="card fade-in-up" style="animation-delay:0.4s;">
+        <h3>12,000 sq ft Facility</h3>
+        <p>
+          Equipped with both traditional benches and CNC-aided workstations,
+          blending heritage techniques with modern precision.
+        </p>
+      </div>
+      <div class="card fade-in-up" style="animation-delay:0.6s;">
+        <h3>In-House R&D</h3>
+        <p>
+          Dedicated prototyping lab for new 10 & 14 ct collections, rapid iteration,
+          and material testing under one roof.
+        </p>
+      </div>
+      <div class="card fade-in-up" style="animation-delay:0.8s;">
+        <h3>Quality & Compliance</h3>
+        <p>
+          Every finished piece undergoes our seven-point inspection—density tests,
+          gemstone certification, and finish verification—before it leaves the atelier.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Teaser -->
+  <section class="section manufacturing-gallery">
+    <div class="container">
+      <h2 class="slide-in-down">Inside Our Atelier</h2>
+      <div class="grid">
+        <div class="card fade-in-up" style="animation-delay:0.2s;">
+          <img src="images/atelier_workbench.jpg" alt="Artisan at Bench" />
+        </div>
+        <div class="card fade-in-up" style="animation-delay:0.4s;">
+          <img src="images/cnc_machinery.jpg" alt="CNC Machinery" />
+        </div>
+        <div class="card fade-in-up" style="animation-delay:0.6s;">
+          <img src="images/rnd_lab.jpg" alt="R&D Prototype Lab" />
+        </div>
+        <div class="card fade-in-up" style="animation-delay:0.8s;">
+          <img src="images/quality_check.jpg" alt="Quality Inspection" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="color:#fff;">© 2025 Azza Jewels. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', ()=> {
+      document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+  </script>
+</body>
+</html>
