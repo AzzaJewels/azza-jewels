@@ -1331,6 +1331,50 @@ body.careers .card:hover {
 .prev-btn { left: -1rem; }
 .next-btn { right: -1rem; }
 
+.swiper-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+.swiper-slide.team-card {
+  /* remove flex-shrink if present */
+  flex-shrink: 0;
+}
+/* Allow grab cursor & smooth dragging on the carousel */
+.myTeamSwiper .swiper-wrapper {
+  cursor: grab;
+}
+.myTeamSwiper .swiper-wrapper:active {
+  cursor: grabbing;
+}
+
+/* Style the navigation buttons */
+.myTeamSwiper .swiper-button-prev,
+.myTeamSwiper .swiper-button-next {
+  background: var(--color-accent);
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.myTeamSwiper .swiper-button-prev:hover,
+.myTeamSwiper .swiper-button-next:hover {
+  background: #a67c2e; /* slightly darker accent */
+  transform: scale(1.1);
+}
+
+/* Enlarge the arrow icons */
+.myTeamSwiper .swiper-button-prev::after,
+.myTeamSwiper .swiper-button-next::after {
+  font-size: 1.2rem;
+}
+
+
 @media (max-width: 768px) {
   .prev-btn, .next-btn { display: none; }
 }
@@ -1365,4 +1409,54 @@ body.careers .card:hover {
 .nav .logo img {
   display: block;
   margin-top: 0.25rem;  /* optional: moves logo slightly lower */
+}
+
+/* Navbar container: single line, spaced out */
+.nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;        /* prevent wrapping */
+}
+
+/* Branding centered between logo & menu */
+.branding {
+  flex: 1 1 auto;           /* allow to grow/shrink */
+  text-align: center;
+}
+
+/* Logo: fixed size on the left */
+.logo {
+  flex: 0 0 auto;           /* no grow/shrink */
+  margin-right: 1.5rem;     /* spacing after logo */
+}
+
+/* Menu: fixed on the right, no wrap */
+.nav-menu {
+  flex: 0 0 auto;           /* no grow/shrink */
+  margin-left: auto;
+  white-space: nowrap;      /* keep items on one line */
+}
+
+.myTeamSwiper .swiper-button-prev,
+.myTeamSwiper .swiper-button-next {
+  background: var(--color-accent);
+  color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), transform var(--transition);
+}
+.myTeamSwiper .swiper-button-prev:hover,
+.myTeamSwiper .swiper-button-next:hover {
+  background: #a67c2e;
+  transform: scale(1.1);
+}
+.myTeamSwiper .swiper-button-prev::after,
+.myTeamSwiper .swiper-button-next::after {
+  font-size: 1.2rem;
 }
