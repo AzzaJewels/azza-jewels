@@ -1460,3 +1460,30 @@ body.careers .card:hover {
 .myTeamSwiper .swiper-button-next::after {
   font-size: 1.2rem;
 }
+/* MOBILE NAVIGATION */
+@media (max-width: 768px) {
+  /* Hide by default on small screens */
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 50;
+  }
+
+  /* When toggled, show it */
+  .nav-menu_visible {
+    display: flex !important;
+  }
+
+  /* Make the toggle button visible */
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+  }
+}

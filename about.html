@@ -350,6 +350,13 @@
         }
       });
     });
-  </script>  
+  </script> 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+      });
+    });
+  </script>   
 </body>
 </html>
