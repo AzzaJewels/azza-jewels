@@ -369,7 +369,7 @@ p {
 
 /* Optionally, reduce max-width on images so text has room */
 .core-values .card img {
-  max-width: 120px; /* or whatever feels balanced */
+  max-width: 240px; /* or whatever feels balanced */
   margin-bottom: 1rem;
 }
 .team-email {
