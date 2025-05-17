@@ -49,25 +49,36 @@
     </div>
   </header>
 
-  <!-- Certificates Gallery -->
-  <section class="section certificates">
-    <div class="container">
-      <h2 class="slide-in-down">Official Certificates</h2>
-      <div class="grid">
-        <div class="card fade-in-up" style="animation-delay:0.2s;">
-          <img src="images/certification-1.jpg" alt="ISO 9001 Certificate" />
-          <h3>ISO 9001:2015</h3>
-          <p>Quality Management System Certification</p>
-        </div>
-        
-        <div class="card fade-in-up" style="animation-delay:1.2s;">
-          <img src="images/certification-2.jpg" alt="Excellence Award" />
-          <h3>OCC Membership</h3>
-          <p>Oman Chamber of Commerce and Industry Membership Certificate</p>
-        </div>
+ <!-- Certificates Gallery -->
+<section class="section certificates">
+  <div class="container">
+    <h2 class="slide-in-down">Official Certificates</h2>
+    <div class="grid">
+      <div class="card fade-in-up" data-img="images/certification-1.jpg" data-caption="ISO 9001:2015 – Quality Management System Certification" style="animation-delay:0.2s;">
+        <img src="images/certification-1.jpg" alt="ISO 9001 Certificate">
+        <h3>ISO 9001:2015</h3>
+        <p>Quality Management System Certification</p>
+      </div>
+      
+      <div class="card fade-in-up" data-img="images/certification-2.jpg" data-caption="OCCI Membership – Oman Chamber of Commerce & Industry Membership Certificate" style="animation-delay:0.4s;">
+        <img src="images/certification-2.jpg" alt="OCC Membership">
+        <h3>OCC Membership</h3>
+        <p>Oman Chamber of Commerce and Industry Membership Certificate</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Lightbox markup -->
+<div class="lightbox-backdrop" id="lightbox">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <img src="" alt="" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-zoom" id="zoom-in">+</button>
+    <button class="lightbox-zoom" id="zoom-out">−</button>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -104,5 +115,48 @@
           .classList.toggle('nav-menu_visible')
       );
   </script>
+
+<script>
+  let scale = 1;
+  const imgEl       = document.getElementById('lightbox-img');
+  const lightbox    = document.getElementById('lightbox');
+  const closeBtn    = document.getElementById('lightbox-close');
+  const zoomInBtn   = document.getElementById('zoom-in');
+  const zoomOutBtn  = document.getElementById('zoom-out');
+
+  // open lightbox
+  document.querySelectorAll('.certificates .card').forEach(card => {
+    card.addEventListener('click', () => {
+      const src     = card.getAttribute('data-img');
+      const caption = card.getAttribute('data-caption');
+      imgEl.src     = src;
+      imgEl.alt     = caption;
+      document.getElementById('lightbox-caption').textContent = caption;
+
+      // reset zoom
+      scale = 1;
+      imgEl.style.transform = `scale(${scale})`;
+
+      lightbox.classList.add('active');
+    });
+  });
+
+  // close lightbox
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox || e.target === closeBtn) {
+      lightbox.classList.remove('active');
+    }
+  });
+
+  // zoom handlers
+  zoomInBtn.addEventListener('click', () => {
+    scale = Math.min(scale + 0.2, 3);              // max 3×
+    imgEl.style.transform = `scale(${scale})`;
+  });
+  zoomOutBtn.addEventListener('click', () => {
+    scale = Math.max(scale - 0.2, 1);              // min 1×
+    imgEl.style.transform = `scale(${scale})`;
+  });
+</script>
 </body>
 </html>

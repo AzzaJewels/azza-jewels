@@ -2098,3 +2098,179 @@ section.certificates .card p {
   font-size: 0.9rem;
   opacity: 0.8;
 }
+
+/* ensure your grid stays as you have it */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* make each card a flex container in column mode */
+.card {
+  display: flex;
+  flex-direction: column;
+  /* optional: give all cards the same minimum height */
+  /* min-height: 300px; */
+}
+
+/* let the <p> (and other content) take up available space */
+.card > p {
+  flex-grow: 1;
+}
+
+/* push the link down to the bottom */
+.card .link {
+  margin-top: auto;
+  /* optional: left-align or center if you like */
+  /* align-self: flex-start; */
+}
+
+/* 1) Make your grid stretch all cells the same height */
+.portfolio-categories .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  align-items: stretch;    /* ensures every card is full-height */
+}
+
+/* 2) Turn each card into a three-row grid: title / body / button */
+.portfolio-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  background: white;       /* if you need the white card look */
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* 3) Make the middle region take all the “stretch” */
+.portfolio-item .card-body {
+  overflow: hidden;        /* if you want to crop overflow */
+}
+
+/* 4) Uniform image slot */
+.image-wrapper {
+  height: 180px;           /* tweak as you like */
+  margin-top: 1rem;
+  overflow: hidden;
+}
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 5) Button sits in its own bottom row automatically */
+.portfolio-item .btn {
+  justify-self: center;
+  margin-top: 1rem;        /* optional spacing */
+}
+.certificates .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.certificates .card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+.certificates .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.certificates .card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.certificates .card h3 {
+  margin: .75rem 0 .25rem;
+  font-size: 1.125rem;
+}
+.certificates .card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+  font-size: .95rem;
+}
+
+/* lightbox backdrop */
+.lightbox-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  bottom:0;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.lightbox-backdrop.active {
+  display: flex;
+}
+
+/* modal content */
+/* Lightbox content tweaks */
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 80vh;
+  transition: transform 0.2s ease;
+  cursor: grab;
+}
+
+/* Zoom buttons */
+.lightbox-zoom {
+  position: absolute;
+  bottom: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.85);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+#zoom-in  { right: 4rem; }
+#zoom-out { right: 1rem; }
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  font-size: 1.5rem;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.lightbox-caption {
+  padding: .75rem 1rem;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
