@@ -6,19 +6,198 @@
   <title>Azza Jewels | Necklaces</title>
   <link rel="icon" href="../images/logo.png" type="image/png"/>
   <link rel="stylesheet" href="../style.css"/>
+  <style>
+    /* Enhanced gallery styles */
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f8f8f8;
+    }
+    
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain; /* Changed from cover to contain to prevent cropping */
+      object-position: center;
+      transition: transform 0.3s ease;
+      background: white;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    /* Overlay icon */
+    .gallery-item::after {
+      content: '🔍';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+    
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      animation: zoomIn 0.3s ease;
+    }
+    
+    @keyframes zoomIn {
+      from { transform: scale(0.3); }
+      to { transform: scale(1); }
+    }
+    
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: color 0.3s ease;
+    }
+    
+    .close:hover {
+      color: #ccc;
+    }
+    
+    /* Navigation arrows */
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    
+    .nav-arrow:hover {
+      background: rgba(0,0,0,0.8);
+    }
+    
+    .prev {
+      left: 20px;
+    }
+    
+    .next {
+      right: 20px;
+    }
+    
+    /* Image counter */
+    .image-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .gallery-item img {
+        height: 250px;
+      }
+      
+      .close {
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+      }
+      
+      .nav-arrow {
+        font-size: 24px;
+        padding: 8px 12px;
+      }
+      
+      .prev {
+        left: 10px;
+      }
+      
+      .next {
+        right: 10px;
+      }
+    }
+  </style>
 </head>
 <body class="category-page">
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Azza Jewels Logo"/></a>
+      <!--  Make the branding clickable --> 
+      <a href="index.html" class="branding">
+        <h1 class="site-title">Azza Jewels</h1>
+        <p class="site-tagline">The Sparkle of Oman</p>
+      </a>
       <ul class="nav-menu">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About Us</a></li>
         <li><a href="../collections.html">Collections</a></li>
-        <li><a href="../contact.html">Contact Us</a></li>
+        <li><a href="../manufacturing.html">Manufacturing</a></li>
         <li><a href="../careers.html">Careers</a></li>
         <li><a href="../certificates.html">Certificates</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
       </ul>
       <button class="nav-toggle">☰</button>
     </div>
@@ -46,19 +225,109 @@
   <!-- Gallery -->
   <section class="section gallery">
     <div class="container grid">
-      <div class="gallery-item"><img src="../images/necklace1.jpg" alt="Necklace 1"/></div>
-      <div class="gallery-item"><img src="../images/necklace2.jpg" alt="Necklace 2"/></div>
-      <div class="gallery-item"><img src="../images/necklace3.jpg" alt="Necklace 3"/></div>
-      <div class="gallery-item"><img src="../images/necklace4.jpg" alt="Necklace 4"/></div>
-      <div class="gallery-item"><img src="../images/necklace5.jpg" alt="Necklace 5"/></div>
-      <div class="gallery-item"><img src="../images/necklace6.jpg" alt="Necklace 6"/></div>
-      <div class="gallery-item"><img src="../images/necklace7.jpg" alt="Necklace 7"/></div>
-      <div class="gallery-item"><img src="../images/necklace8.jpg" alt="Necklace 8"/></div>
-      <div class="gallery-item"><img src="../images/necklace9.jpg" alt="Necklace 9"/></div>
-      <div class="gallery-item"><img src="../images/necklace10.jpg" alt="Necklace 10"/></div>
-      <div class="gallery-item"><img src="../images/necklace11.jpg" alt="Necklace 11"/></div>
+      <div class="gallery-item" onclick="openModal(0)">
+        <img src="../images/necklace1.png" alt="Elegant Filigree Chain Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(1)">
+        <img src="../images/necklace2.png" alt="Diamond and Pearl Statement Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(2)">
+        <img src="../images/necklace3.png" alt="Traditional Omani Gold Choker"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(3)">
+        <img src="../images/necklace4.png" alt="Ruby and Gold Layered Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(4)">
+        <img src="../images/necklace5.png" alt="Emerald Pendant Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(5)">
+        <img src="../images/necklace6.png" alt="Intricate Gold Chain with Gemstones"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(6)">
+        <img src="../images/necklace7.png" alt="Multi-Strand Pearl and Gold Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(7)">
+        <img src="../images/necklace8.png" alt="Vintage-Inspired Diamond Collar"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(8)">
+        <img src="../images/necklace9.png" alt="Sapphire and Gold Pendant Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(9)">
+        <img src="../images/necklace10.png" alt="Delicate Gold Chain with Geometric Pendant"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(10)">
+        <img src="../images/necklace11.png" alt="Bold Statement Collar Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(11)">
+        <img src="../images/necklace12.png" alt="Contemporary Mixed-Metal Design"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(12)">
+        <img src="../images/necklace13.png" alt="Elegant Minimalist Chain"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(13)">
+        <img src="../images/necklace14.png" alt="Ornate Traditional Design"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(14)">
+        <img src="../images/necklace15.png" alt="Platinum and Diamond Tennis Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(15)">
+        <img src="../images/necklace16.png" alt="Baroque Pearl and Gold Statement"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(16)">
+        <img src="../images/necklace17.png" alt="Cascading Diamond Waterfall Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(17)">
+        <img src="../images/necklace18.png" alt="Antique-Style Filigree Choker"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(18)">
+        <img src="../images/necklace19.png" alt="Modern Geometric Gold Necklace"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(19)">
+        <img src="../images/necklace20.png" alt="Royal Ruby and Diamond Collar"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(20)">
+        <img src="../images/necklace21.png" alt="Heritage-Inspired Chain with Medallion"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(21)">
+        <img src="../images/necklace22.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(22)">
+        <img src="../images/necklace23.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(23)">
+        <img src="../images/necklace24.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(24)">
+        <img src="../images/necklace25.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(25)">
+        <img src="../images/necklace26.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(26)">
+        <img src="../images/necklace27.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(27)">
+        <img src="../images/necklace28.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(28)">
+        <img src="../images/necklace29.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
+      <div class="gallery-item" onclick="openModal(29)">
+        <img src="../images/necklace30.png" alt="Luxury Multi-Gem Statement Piece"/>
+      </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="nav-arrow prev" onclick="changeImage(-1)">&#10094;</div>
+    <div class="nav-arrow next" onclick="changeImage(1)">&#10095;</div>
+    <img class="modal-content" id="modalImage">
+    <div class="image-counter">
+      <span id="currentImageNumber">1</span> / <span id="totalImages">30</span>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -85,10 +354,111 @@
     <p class="footer-note">© 2025 Azza Jewels. All rights reserved.</p>
     </div>
   </footer>
-
+  
   <script>
+    // Mobile navigation toggle
     document.querySelector('.nav-toggle').addEventListener('click', ()=> {
       document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+
+    // Gallery modal functionality
+    const images = [
+      { src: '../images/necklace1.png', alt: 'Elegant Filigree Chain Necklace' },
+      { src: '../images/necklace2.png', alt: 'Diamond and Pearl Statement Necklace' },
+      { src: '../images/necklace3.png', alt: 'Traditional Omani Gold Choker' },
+      { src: '../images/necklace4.png', alt: 'Ruby and Gold Layered Necklace' },
+      { src: '../images/necklace5.png', alt: 'Emerald Pendant Statement Piece' },
+      { src: '../images/necklace6.png', alt: 'Intricate Gold Chain with Gemstones' },
+      { src: '../images/necklace7.png', alt: 'Multi-Strand Pearl and Gold Necklace' },
+      { src: '../images/necklace8.png', alt: 'Vintage-Inspired Diamond Collar' },
+      { src: '../images/necklace9.png', alt: 'Sapphire and Gold Pendant Necklace' },
+      { src: '../images/necklace10.png', alt: 'Delicate Gold Chain with Geometric Pendant' },
+      { src: '../images/necklace11.png', alt: 'Bold Statement Collar Necklace' },
+      { src: '../images/necklace12.png', alt: 'Bold Statement Collar Necklace' },
+      { src: '../images/necklace13.png', alt: 'Bold Statement Collar Necklace' },
+      { src: '../images/necklace14.png', alt: 'Bold Statement Collar Necklace' },
+      { src: '../images/necklace15.png', alt: 'Platinum and Diamond Tennis Necklace' },
+      { src: '../images/necklace16.png', alt: 'Baroque Pearl and Gold Statement' },
+      { src: '../images/necklace17.png', alt: 'Cascading Diamond Waterfall Necklace' },
+      { src: '../images/necklace18.png', alt: 'Antique-Style Filigree Choker' },
+      { src: '../images/necklace19.png', alt: 'Modern Geometric Gold Necklace' },
+      { src: '../images/necklace20.png', alt: 'Royal Ruby and Diamond Collar' },
+      { src: '../images/necklace21.png', alt: 'Heritage-Inspired Chain with Medallion' },
+      { src: '../images/necklace22.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace23.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace24.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace25.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace26.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace27.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace28.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace29.png', alt: 'Luxury Multi-Gem Statement Piece' },
+      { src: '../images/necklace30.png', alt: 'Luxury Multi-Gem Statement Piece' }
+    ];
+
+    let currentImageIndex = 0;
+
+    function openModal(index) {
+      currentImageIndex = index;
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const currentNumber = document.getElementById('currentImageNumber');
+      
+      modal.classList.add('active');
+      modalImg.src = images[index].src;
+      modalImg.alt = images[index].alt;
+      currentNumber.textContent = index + 1;
+      
+      // Prevent body scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeImage(direction) {
+      currentImageIndex += direction;
+      
+      // Loop around if at the ends
+      if (currentImageIndex >= images.length) {
+        currentImageIndex = 0;
+      } else if (currentImageIndex < 0) {
+        currentImageIndex = images.length - 1;
+      }
+      
+      const modalImg = document.getElementById('modalImage');
+      const currentNumber = document.getElementById('currentImageNumber');
+      
+      modalImg.src = images[currentImageIndex].src;
+      modalImg.alt = images[currentImageIndex].alt;
+      currentNumber.textContent = currentImageIndex + 1;
+    }
+
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('imageModal');
+      if (modal.classList.contains('active')) {
+        switch(e.key) {
+          case 'Escape':
+            closeModal();
+            break;
+          case 'ArrowLeft':
+            changeImage(-1);
+            break;
+          case 'ArrowRight':
+            changeImage(1);
+            break;
+        }
+      }
     });
   </script>
 </body>

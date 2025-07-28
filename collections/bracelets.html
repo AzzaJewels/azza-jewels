@@ -6,19 +6,169 @@
   <title>Azza Jewels | Bracelets</title>
   <link rel="icon" href="../images/logo.png" type="image/png"/>
   <link rel="stylesheet" href="../style.css"/>
+  <style>
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #f8f8f8;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      object-position: center;
+      background: white;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item::after {
+      content: '🔍';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      animation: fadeIn 0.3s ease;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+      border-radius: 8px;
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.3); }
+      to { transform: scale(1); }
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: color 0.3s ease;
+    }
+
+    .close:hover {
+      color: #ccc;
+    }
+
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgba(0,0,0,0.5);
+      padding: 10px 15px;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .nav-arrow:hover {
+      background: rgba(0,0,0,0.8);
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+
+    .image-counter {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-item img { height: 250px; }
+      .close { top: 10px; right: 20px; font-size: 30px; }
+      .nav-arrow { font-size: 24px; padding: 8px 12px; }
+      .prev { left: 10px; }
+      .next { right: 10px; }
+    }
+  </style>
 </head>
 <body class="category-page">
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <a href="../index.html" class="logo"><img src="../images/logo.png" alt="Azza Jewels Logo"/></a>
+      <a href="index.html" class="branding">
+        <h1 class="site-title">Azza Jewels</h1>
+        <p class="site-tagline">The Sparkle of Oman</p>
+      </a>
       <ul class="nav-menu">
         <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About Us</a></li>
         <li><a href="../collections.html">Collections</a></li>
-        <li><a href="../contact.html">Contact Us</a></li>
+        <li><a href="../manufacturing.html">Manufacturing</a></li>
         <li><a href="../careers.html">Careers</a></li>
         <li><a href="../certificates.html">Certificates</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
       </ul>
       <button class="nav-toggle">☰</button>
     </div>
@@ -35,8 +185,6 @@
         hand-forged, engraved and polished by seasoned artisans. Let these wearable
         masterpieces accentuate your wrist with the subtle confidence of true luxury.
       </p>
-      
-      <!-- Back Button -->
       <div class="back-button">
         <a href="../collections.html" class="btn">&larr; Back to Collections</a>
       </div>
@@ -46,48 +194,143 @@
   <!-- Gallery -->
   <section class="section gallery">
     <div class="container grid">
-      <div class="gallery-item"><img src="../images/bracelets1.jpg" alt="Bracelet 1"/></div>
-      <div class="gallery-item"><img src="../images/bracelets2.jpg" alt="Bracelet 2"/></div>
-      <div class="gallery-item"><img src="../images/bracelets3.jpg" alt="Bracelet 3"/></div>
-      <div class="gallery-item"><img src="../images/bracelets4.jpg" alt="Bracelet 4"/></div>
-      <div class="gallery-item"><img src="../images/bracelets5.jpg" alt="Bracelet 5"/></div>
-      <div class="gallery-item"><img src="../images/bracelets6.jpg" alt="Bracelet 6"/></div>
-      <div class="gallery-item"><img src="../images/bracelets7.jpg" alt="Bracelet 7"/></div>
-      <div class="gallery-item"><img src="../images/bracelets8.jpg" alt="Bracelet 8"/></div>
-      <div class="gallery-item"><img src="../images/bracelets9.jpg" alt="Bracelet 9"/></div>
-      <div class="gallery-item"><img src="../images/bracelets10.jpg" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(0)"><img src="../images/bracelets1.jpg" alt="Bracelet 1"/></div>
+      <div class="gallery-item" onclick="openModal(1)"><img src="../images/bracelets2.jpg" alt="Bracelet 2"/></div>
+      <div class="gallery-item" onclick="openModal(2)"><img src="../images/bracelets3.jpg" alt="Bracelet 3"/></div>
+      <div class="gallery-item" onclick="openModal(3)"><img src="../images/bracelets4.jpg" alt="Bracelet 4"/></div>
+      <div class="gallery-item" onclick="openModal(4)"><img src="../images/bracelets5.jpg" alt="Bracelet 5"/></div>
+      <div class="gallery-item" onclick="openModal(5)"><img src="../images/bracelets6.jpg" alt="Bracelet 6"/></div>
+      <div class="gallery-item" onclick="openModal(6)"><img src="../images/bracelets7.jpg" alt="Bracelet 7"/></div>
+      <div class="gallery-item" onclick="openModal(7)"><img src="../images/bracelets8.jpg" alt="Bracelet 8"/></div>
+      <div class="gallery-item" onclick="openModal(8)"><img src="../images/bracelets9.jpg" alt="Bracelet 9"/></div>
+      <div class="gallery-item" onclick="openModal(9)"><img src="../images/bracelets10.jpg" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(10)"><img src="../images/bracelets11.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(11)"><img src="../images/bracelets12.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(12)"><img src="../images/bracelets13.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(13)"><img src="../images/bracelets14.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(14)"><img src="../images/bracelets15.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(15)"><img src="../images/bracelets16.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(16)"><img src="../images/bracelets17.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(17)"><img src="../images/bracelets18.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(18)"><img src="../images/bracelets19.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(19)"><img src="../images/bracelets20.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(20)"><img src="../images/bracelets21.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(21)"><img src="../images/bracelets22.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(22)"><img src="../images/bracelets23.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(23)"><img src="../images/bracelets24.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(24)"><img src="../images/bracelets25.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(25)"><img src="../images/bracelets26.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(26)"><img src="../images/bracelets27.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(27)"><img src="../images/bracelets28.png" alt="Bracelet 10"/></div>
+      <div class="gallery-item" onclick="openModal(28)"><img src="../images/bracelets29.png" alt="Bracelet 10"/></div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="nav-arrow prev" onclick="changeImage(-1)">&#10094;</div>
+    <div class="nav-arrow next" onclick="changeImage(1)">&#10095;</div>
+    <img class="modal-content" id="modalImage" alt="" />
+    <div class="image-counter">
+      <span id="currentImageNumber">1</span> / <span id="totalImages">10</span>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-    <!-- Social Icons -->
-    <ul class="social-icons">
-      <li>
-      <a href="https://www.linkedin.com/in/azza-jewels/" aria-label="LinkedIn">
-          <img src="images/linkedin.png" alt="LinkedIn" />
-      </a>
-      </li>
-      <li>
-      <a href="https://www.instagram.com/azzajewelsoman/" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram" />
-      </a>
-      </li>
-      <li>
-      <a href="https://www.facebook.com/profile.php?id=61576323234870" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook" />
-      </a>
-      </li>
-    </ul>
-    <!-- Copyright -->
-    <p class="footer-note">© 2025 Azza Jewels. All rights reserved.</p>
+      <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/in/azza-jewels/" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn" /></a></li>
+        <li><a href="https://www.instagram.com/azzajewelsoman/" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram" /></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61576323234870" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook" /></a></li>
+      </ul>
+      <p class="footer-note">© 2025 Azza Jewels. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', ()=> {
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
       document.querySelector('.nav-menu').classList.toggle('nav-menu_visible');
+    });
+
+    const images = [
+      { src: '../images/bracelets1.jpg', alt: 'Bracelet 1' },
+      { src: '../images/bracelets2.jpg', alt: 'Bracelet 2' },
+      { src: '../images/bracelets3.jpg', alt: 'Bracelet 3' },
+      { src: '../images/bracelets4.jpg', alt: 'Bracelet 4' },
+      { src: '../images/bracelets5.jpg', alt: 'Bracelet 5' },
+      { src: '../images/bracelets6.jpg', alt: 'Bracelet 6' },
+      { src: '../images/bracelets7.jpg', alt: 'Bracelet 7' },
+      { src: '../images/bracelets8.jpg', alt: 'Bracelet 8' },
+      { src: '../images/bracelets9.jpg', alt: 'Bracelet 9' },
+      { src: '../images/bracelets10.jpg', alt: 'Bracelet 10' },
+      { src: '../images/bracelets11.png', alt: 'Bracelet 11' },
+      { src: '../images/bracelets12.png', alt: 'Bracelet 12' },
+      { src: '../images/bracelets13.png', alt: 'Bracelet 13' },
+      { src: '../images/bracelets14.png', alt: 'Bracelet 14' },
+      { src: '../images/bracelets15.png', alt: 'Bracelet 15' },
+      { src: '../images/bracelets16.png', alt: 'Bracelet 16' },
+      { src: '../images/bracelets17.png', alt: 'Bracelet 17' },
+      { src: '../images/bracelets18.png', alt: 'Bracelet 18' },
+      { src: '../images/bracelets19.png', alt: 'Bracelet 19' },
+      { src: '../images/bracelets20.png', alt: 'Bracelet 20' },
+      { src: '../images/bracelets21.png', alt: 'Bracelet 21' },
+      { src: '../images/bracelets22.png', alt: 'Bracelet 22' },
+      { src: '../images/bracelets23.png', alt: 'Bracelet 23' },
+      { src: '../images/bracelets24.png', alt: 'Bracelet 24' },
+      { src: '../images/bracelets25.png', alt: 'Bracelet 25' },
+      { src: '../images/bracelets26.png', alt: 'Bracelet 26' },
+      { src: '../images/bracelets27.png', alt: 'Bracelet 27' },
+      { src: '../images/bracelets28.png', alt: 'Bracelet 28' },
+      { src: '../images/bracelets29.png', alt: 'Bracelet 29' }
+    ];
+
+    let currentImageIndex = 0;
+
+    function openModal(index) {
+      currentImageIndex = index;
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const currentNumber = document.getElementById('currentImageNumber');
+      const totalImages = document.getElementById('totalImages');
+
+      modal.classList.add('active');
+      modalImg.src = images[index].src;
+      modalImg.alt = images[index].alt;
+      currentNumber.textContent = index + 1;
+      totalImages.textContent = images.length;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function changeImage(direction) {
+      currentImageIndex += direction;
+      if (currentImageIndex >= images.length) currentImageIndex = 0;
+      if (currentImageIndex < 0) currentImageIndex = images.length - 1;
+
+      const modalImg = document.getElementById('modalImage');
+      const currentNumber = document.getElementById('currentImageNumber');
+      modalImg.src = images[currentImageIndex].src;
+      modalImg.alt = images[currentImageIndex].alt;
+      currentNumber.textContent = currentImageIndex + 1;
+    }
+
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('imageModal');
+      if (modal.classList.contains('active')) {
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') changeImage(-1);
+        if (e.key === 'ArrowRight') changeImage(1);
+      }
     });
   </script>
 </body>
