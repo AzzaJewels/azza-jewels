@@ -2334,3 +2334,30 @@ section.certificates .card p {
 .manufacturing-gallery .card:hover img {
   transform: scale(1.05);
 }
+
+.certificate-notice {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fffbea;
+  border-top: 1px solid #f1e5c5;
+  border-bottom: 1px solid #f1e5c5;
+}
+
+.certificate-notice p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.certificate-notice .email-link {
+  font-weight: 600;
+  color: #b88a44;
+  text-decoration: none;
+}
+
+.certificate-notice .email-link:hover {
+  text-decoration: underline;
+}
