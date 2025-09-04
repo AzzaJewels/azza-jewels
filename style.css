@@ -2302,3 +2302,35 @@ section.certificates .card p {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
+
+/* Manufacturing Gallery */
+.manufacturing-gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.manufacturing-gallery .card {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.manufacturing-gallery .card img {
+  width: 100%;
+  height: 250px; /* fixed height for uniform look */
+  object-fit: cover; /* crops nicely to fill */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Effects */
+.manufacturing-gallery .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+.manufacturing-gallery .card:hover img {
+  transform: scale(1.05);
+}
