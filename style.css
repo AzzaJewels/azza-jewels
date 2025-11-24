@@ -2362,18 +2362,81 @@ section.certificates .card p {
   text-decoration: underline;
 }
 
+/* Layout stays side-by-side on all screens */
 .factory-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 2rem;
-  align-items: center;
 }
 
-.factory-image img {
-  width: 100%;
+/* Left section (text + images) */
+.factory-left {
+  flex: 1;
+}
+
+/* Two images below text */
+.factory-images {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.factory-images img {
+  width: 48%;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35), 
-              0 0 30px rgba(212, 175, 55, 0.25);
+
+  /* Gold glow */
+  box-shadow:
+      0 6px 18px rgba(212, 175, 55, 0.35),
+      0 0 25px rgba(212, 175, 55, 0.25);
 }
 
+/* Made in Oman container layout */
+.made-oman-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo */
+.made-oman-image img {
+  width: 140px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  box-shadow:
+    0 6px 18px rgba(212, 175, 55, 0.35),
+    0 0 25px rgba(212, 175, 55, 0.25);
+}
+
+/* Text section */
+.made-oman-content {
+  flex: 1;
+}
+
+/* Match factory heading size but slightly stronger */
+
+/* Match factory paragraph styling */
+.made-oman-content p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* MOBILE — stays side-by-side but refined */
+@media (max-width: 480px) {
+
+  .made-oman-container {
+    gap: 1rem;
+  }
+
+  .made-oman-image img {
+    width: 110px; /* smaller but still bold */
+  }
+
+  .made-oman-content p {
+    font-size: 1rem; 
+    line-height: 1.5;
+  }
+}
