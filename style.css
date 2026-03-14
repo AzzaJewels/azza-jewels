@@ -2440,7 +2440,7 @@ section.certificates .card p {
     line-height: 1.5;
   }
 }
-/* Ramadan Banner - Fixed Top */
+/* Ramadan Banner */
 .ramadan-banner {
   position: fixed;
   top: 0;
@@ -2457,7 +2457,15 @@ section.certificates .card p {
   z-index: 9999;
 }
 
-/* Push navbar down so banner doesn't cover it */
+/* Move navbar below banner */
 .nav {
-  margin-top: 40px;
+  position: fixed; /* or sticky if you already use that */
+  top: 42px;       /* height of banner */
+  width: 100%;
+  z-index: 9998;
+}
+
+/* Push page content down */
+body {
+  padding-top: 100px;
 }
