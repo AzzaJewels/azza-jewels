@@ -2440,32 +2440,3 @@ section.certificates .card p {
     line-height: 1.5;
   }
 }
-/* Ramadan Banner */
-.ramadan-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #b8962e, #e6c96a);
-  color: #fff;
-  text-align: center;
-  padding: 10px 15px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  z-index: 9999;
-}
-
-/* Move navbar below banner */
-.nav {
-  position: fixed; /* or sticky if you already use that */
-  top: 42px;       /* height of banner */
-  width: 100%;
-  z-index: 9998;
-}
-
-/* Push page content down */
-body {
-  padding-top: 100px;
-}
