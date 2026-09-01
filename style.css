@@ -787,7 +787,7 @@ p.collections {
   .unique-grid {
     gap: 2em;
   }
-  /* What Sets Us Apart â€” larger icons */
+  /* What Sets Us Apart — larger icons */
 
   .unique-grid .card img {
     width: 300px;      /* up from 60px */
@@ -811,7 +811,7 @@ p.collections {
 /* Center the Full Story & Timeline button without stretching it */
 .founder-teaser .founder-btn {
     display: block;           /* make it a block so margin auto works */
-    width: fit-content;       /* shrinkâ€wrap to its own content */
+    width: fit-content;       /* shrink‐wrap to its own content */
     margin: 2rem auto 0;      /* 2rem top spacing, auto left/right centering */
   }
   
@@ -983,7 +983,7 @@ p.collections {
     margin:             0 auto 2rem;
   }
   
-  /* Ensure each cardâ€™s content is centered */
+  /* Ensure each card’s content is centered */
   .contact-section {
     background:    #fff;
     padding:       1.5rem;
@@ -992,7 +992,7 @@ p.collections {
     text-align:    center;
   }
   
-  /* â€œGet in Touchâ€ card heading */
+  /* “Get in Touch” card heading */
   .get-in-touch h3 {
     font-family:   var(--font-serif);
     font-size:     1.75rem;
@@ -1064,7 +1064,7 @@ p.collections {
   }
   
   /*=============================================
-=        Careers Page â€“ Spacing Overrides     =
+=        Careers Page – Spacing Overrides     =
 =============================================*/
 
 body.careers .hero.hero-compact {
@@ -1207,7 +1207,7 @@ body.careers .card:hover {
 
 }
 
-/* Portfolio images â€“ slightly smaller for balance */
+/* Portfolio images – slightly smaller for balance */
 .portfolio-img {
   display: block;
   margin: 1rem auto 0;
@@ -1286,7 +1286,7 @@ body.careers .card:hover {
 =============================================*/
 .portfolio > .container > p {
   /* Center and constrain width */
-  max-width:      800px;     /* wonâ€™t grow beyond this */
+  max-width:      800px;     /* won’t grow beyond this */
   width:          90%;       /* but will shrink on smaller viewports */
   margin:         0 auto 2rem;/* centered with bottom gap */
 
@@ -1776,7 +1776,7 @@ body.careers .card:hover {
   }
 }
 /*=============================================
-=              Heroâ€Slider Fixes              =
+=              Hero‐Slider Fixes              =
 =============================================*/
 
 /* Remove the default .section padding on the hero slider */
@@ -1797,7 +1797,7 @@ body.careers .card:hover {
   background: transparent !important;
 }
 
-/* If youâ€™re still seeing space at the very top or bottom, */
+/* If you’re still seeing space at the very top or bottom, */
 html, body {
   margin: 0;
   padding: 0;
@@ -1906,14 +1906,14 @@ html, body {
   background: transparent !important;
 }
 
-/* If youâ€™re still seeing space at the very top or bottom, */
+/* If you’re still seeing space at the very top or bottom, */
 html, body {
   margin: 0;
   padding: 0;
 }
-/* â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”
+/* ————————————————————
    Mobile nav collapse
-   â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
+   ———————————————————— */
    @media (max-width: 768px) {
     /* hide by default */
     .nav-menu {
@@ -2144,7 +2144,7 @@ section.certificates .card p {
   box-sizing: border-box;
 }
 
-/* 3) Make the middle region take all the â€œstretchâ€ */
+/* 3) Make the middle region take all the “stretch” */
 .portfolio-item .card-body {
   overflow: hidden;        /* if you want to crop overflow */
 }
@@ -2362,156 +2362,6 @@ section.certificates .card p {
   text-decoration: underline;
 }
 
-/* Awards section */
-.awards-showcase {
-  background: #fbfaf7;
-}
-
-.awards-showcase__eyebrow {
-  margin-bottom: .55rem;
-  color: #a77f2d;
-  font-size: .8rem;
-  font-weight: 600;
-  letter-spacing: .17em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.awards-showcase__card {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  max-width: 960px;
-  margin: 2.5rem auto 0;
-  padding: 3.5rem;
-  background: linear-gradient(135deg, #fff 0%, #fcf7e9 100%);
-  border: 1px solid #d8b666;
-  box-shadow: 0 14px 38px rgba(74, 55, 20, .08);
-}
-
-.awards-showcase__mark {
-  flex: 0 0 86px;
-  width: 86px;
-  height: 86px;
-  border: 1px solid #c9a24b;
-  border-radius: 50%;
-  color: #c9a24b;
-  display: grid;
-  font-size: 2rem;
-  place-items: center;
-}
-
-.awards-showcase__content { flex: 1; }
-.awards-showcase__label {
-  margin: 0 0 .5rem;
-  color: #a77f2d;
-  font-size: .82rem;
-  font-weight: 600;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.awards-showcase h3 {
-  margin: 0 0 1rem;
-  color: #392a13;
-  font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  line-height: 1.15;
-}
-.awards-showcase__content p { color: #625848; line-height: 1.75; }
-.awards-showcase__details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .65rem 1.1rem;
-  margin-top: 1.5rem;
-  color: #503d1d;
-  font-size: .92rem;
-}
-.awards-showcase__details span + span { border-left: 1px solid #d8b666; padding-left: 1.1rem; }
-
-/* Homepage award callout */
-.home-award-callout {
-  background: #fbfaf7;
-  border-bottom: 1px solid #eadfbd;
-  padding: 2rem 0;
-}
-.home-award-callout__inner {
-  display: flex;
-  align-items: center;
-  gap: 1.4rem;
-}
-.home-award-callout__mark {
-  color: #c9a24b;
-  font-size: 1.8rem;
-}
-.home-award-callout__copy { flex: 1; }
-.home-award-callout__copy p {
-  margin: 0 0 .25rem;
-  color: #a77f2d;
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-}
-.home-award-callout__copy h2 {
-  margin: 0;
-  color: #382b17;
-  font-family: var(--font-serif);
-  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
-}
-.home-award-callout__copy h2::after { display: none; }
-.home-award-callout__copy span { color: #6d604c; font-size: .92rem; }
-.home-award-callout__link {
-  white-space: nowrap;
-  color: #8e6c28;
-  font-weight: 600;
-  text-decoration: none;
-}
-.home-award-callout__link:hover { color: #382b17; }
-
-@media (max-width: 700px) {
-  .awards-showcase__card { align-items: flex-start; flex-direction: column; gap: 1.5rem; padding: 2.25rem 1.5rem; }
-  .awards-showcase__details { flex-direction: column; gap: .35rem; }
-  .awards-showcase__details span + span { border-left: 0; padding-left: 0; }
-  .home-award-callout__inner { align-items: flex-start; flex-wrap: wrap; }
-  .home-award-callout__link { width: 100%; }
-}
-
-/* Keep the brand block clear of the navigation on medium-width screens. */
-@media (max-width: 1200px) {
-  .nav .container {
-    width: 94%;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    right: 3%;
-    width: min(280px, 90vw);
-    padding: 1rem 1.25rem;
-    background: #fff;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .12);
-    z-index: 1000;
-  }
-
-  .nav-menu.nav-menu_visible {
-    display: flex !important;
-  }
-
-  .nav-toggle {
-    display: block;
-    margin-left: 1rem;
-  }
-}
-
-@media (max-width: 520px) {
-  .nav .logo { margin-right: .75rem; }
-  .logo img { height: 48px; }
-  .site-title { font-size: 1.25rem; }
-  .site-tagline { font-size: .62rem; letter-spacing: .08em; }
-}
-
 /* Layout stays side-by-side on all screens */
 .factory-container {
   display: flex;
@@ -2574,7 +2424,7 @@ section.certificates .card p {
   font-weight: 300;
 }
 
-/* MOBILE â€” stays side-by-side but refined */
+/* MOBILE — stays side-by-side but refined */
 @media (max-width: 480px) {
 
   .made-oman-container {
@@ -2588,5 +2438,169 @@ section.certificates .card p {
   .made-oman-content p {
     font-size: 1rem; 
     line-height: 1.5;
+  }
+}
+/* Awards section */
+.awards-showcase {
+  background: #fbfaf7;
+}
+
+.awards-showcase__eyebrow {
+  margin-bottom: .55rem;
+  color: #a77f2d;
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .17em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.awards-showcase__card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  padding: 3.5rem;
+  background: linear-gradient(135deg, #fff 0%, #fcf7e9 100%);
+  border: 1px solid #d8b666;
+  box-shadow: 0 14px 38px rgba(74, 55, 20, .08);
+}
+
+.awards-showcase__mark {
+  flex: 0 0 86px;
+  width: 86px;
+  height: 86px;
+  border: 1px solid #c9a24b;
+  border-radius: 50%;
+  color: #c9a24b;
+  display: grid;
+  font-size: 2rem;
+  place-items: center;
+}
+
+.awards-showcase__content {
+  flex: 1;
+}
+
+.awards-showcase__label {
+  margin: 0 0 .5rem;
+  color: #a77f2d;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.awards-showcase h3 {
+  margin: 0 0 1rem;
+  color: #392a13;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.15;
+}
+
+.awards-showcase__content p {
+  color: #625848;
+  line-height: 1.75;
+}
+
+.awards-showcase__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem 1.1rem;
+  margin-top: 1.5rem;
+  color: #503d1d;
+  font-size: .92rem;
+}
+
+.awards-showcase__details span + span {
+  border-left: 1px solid #d8b666;
+  padding-left: 1.1rem;
+}
+
+/* Homepage award callout */
+.home-award-callout {
+  background: #fbfaf7;
+  border-bottom: 1px solid #eadfbd;
+  padding: 2rem 0;
+}
+
+.home-award-callout__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.home-award-callout__mark {
+  color: #c9a24b;
+  font-size: 1.8rem;
+}
+
+.home-award-callout__copy {
+  flex: 1;
+}
+
+.home-award-callout__copy p {
+  margin: 0 0 .25rem;
+  color: #a77f2d;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.home-award-callout__copy h2 {
+  margin: 0;
+  color: #382b17;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+}
+
+.home-award-callout__copy h2::after {
+  display: none;
+}
+
+.home-award-callout__copy span {
+  color: #6d604c;
+  font-size: .92rem;
+}
+
+.home-award-callout__link {
+  white-space: nowrap;
+  color: #8e6c28;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-award-callout__link:hover {
+  color: #382b17;
+}
+
+@media (max-width: 700px) {
+  .awards-showcase__card {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.25rem 1.5rem;
+  }
+
+  .awards-showcase__details {
+    flex-direction: column;
+    gap: .35rem;
+  }
+
+  .awards-showcase__details span + span {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .home-award-callout__inner {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .home-award-callout__link {
+    width: 100%;
   }
 }
