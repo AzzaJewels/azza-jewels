@@ -1,0 +1,1 @@
+Version 7: new collection photos and latest references removed. Original collection pictures restored. Supplied facility day/night photos retained. Source package; deployment required.

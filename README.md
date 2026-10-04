@@ -1,3 +1,13 @@
+# Open the updated website
+
+Extract the entire ZIP and open `index.html` inside `azza-jewels-updated-v7`.
+
+The original collection photographs are restored. The homepage Production Facility section includes the supplied daytime and nighttime photographs.
+
+To publish these source changes, replace the contents of the existing hosting folder with this folder's contents. Keep `index.html` at the deployed root.
+
+---
+
 # Azza Jewels — Official Website
 
 <p align="center">

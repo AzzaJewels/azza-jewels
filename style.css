@@ -2813,3 +2813,11 @@ section.certificates .card p {
 
 img { height: auto; }
 .logo img { width: auto; }
+
+/* Atelier collection photography: restrained editorial presentation */
+/* Actual daytime and nighttime facility photographs. */
+.factory-images.facility-day-night { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+.facility-day-night figure { margin: 0; min-width: 0; }
+.factory-images.facility-day-night img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; background: #f0ede7; border-radius: 0; box-shadow: none; }
+.facility-day-night figcaption { color: #766447; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; padding-top: .9rem; }
+@media (max-width: 600px) { .factory-images.facility-day-night { grid-template-columns: 1fr; } }
