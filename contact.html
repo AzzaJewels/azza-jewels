@@ -12,13 +12,20 @@
   />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/logo.png" />
+  <meta name="description" content="Contact Azza Jewels Manufacturing LLC in Muscat, Oman for gold jewellery, collection development and manufacturing enquiries." />
+  <link rel="canonical" href="https://azzajewels.com/contact.html" />
+  <meta property="og:title" content="Azza Jewels | Contact" />
+  <meta property="og:description" content="Contact Azza Jewels Manufacturing LLC in Muscat, Oman for gold jewellery, collection development and manufacturing enquiries." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://azzajewels.com/contact.html" />
+  <meta property="og:image" content="https://azzajewels.com/images/logo.png" />
 </head>
 <body>
   <!-- Navigation -->
   <nav class="nav">
     <div class="container">
       <a href="index.html" class="logo">
-        <img src="images/logo.png" alt="Azza Jewels Logo" />
+        <img src="images/logo.png" alt="Azza Jewels Logo" width="381" height="387" />
       </a>
       <a href="index.html" class="branding">
         <h1 class="site-title">Azza Jewels</h1>
@@ -41,11 +48,18 @@
   <section class="section">
     <div class="container">
       <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button class="btn" type="submit">Send Message</button>
+      <p class="contact-intro">Tell us about your collection, manufacturing requirements or jewellery enquiry.</p>
+      <form class="contact-form" id="enquiry-form" action="mailto:info@azzajewels.com" method="post" enctype="text/plain" aria-describedby="enquiry-help">
+        <label for="enquiry-name">Your name</label>
+        <input id="enquiry-name" name="name" type="text" autocomplete="name" maxlength="120" required />
+        <label for="enquiry-email">Your email</label>
+        <input id="enquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+        <label for="enquiry-message">Your message</label>
+        <textarea id="enquiry-message" name="message" rows="5" maxlength="2000" required></textarea>
+        <p id="enquiry-help" class="enquiry-help">This opens a draft in your email app. Review it and press Send there to submit your enquiry.</p>
+        <button class="btn" type="submit">Open Email Draft</button>
+        <p id="enquiry-status" class="enquiry-help" role="status" aria-live="polite"></p>
+        <p class="enquiry-help">Prefer to email directly? <a href="mailto:info@azzajewels.com">info@azzajewels.com</a></p>
       </form>
 
       <!-- Address & “Get in Touch” Cards -->
@@ -84,6 +98,7 @@
         <div class="map-container">
           <iframe
             src="https://www.google.com/maps?q=23.6171944,58.5471667&z=17&output=embed"
+            title="Azza Jewels manufacturing facility location in Muscat"
             frameborder="0"
             allowfullscreen
             loading="lazy"
@@ -99,17 +114,17 @@
     <ul class="social-icons">
         <li>
         <a href="https://www.linkedin.com/company/azza-jewels-muscat/" aria-label="LinkedIn">
-            <img src="images/linkedin.png" alt="LinkedIn" />
+            <img src="images/linkedin.png" alt="LinkedIn" loading="lazy" decoding="async" width="225" height="225" />
         </a>
         </li>
         <li>
         <a href="https://www.instagram.com/azzajewelsoman/" aria-label="Instagram">
-            <img src="images/instagram.png" alt="Instagram" />
+            <img src="images/instagram-web.webp" alt="Instagram" loading="lazy" decoding="async" width="577" height="579" />
         </a>
         </li>
         <li>
         <a href="https://www.facebook.com/azzajewels.om/" aria-label="Facebook">
-            <img src="images/facebook.png" alt="Facebook" />
+            <img src="images/facebook-web.webp" alt="Facebook" loading="lazy" decoding="async" width="800" height="800" />
         </a>
         </li>
     </ul>
@@ -118,6 +133,7 @@
     </div>
   </footer>
 
+  <script src="scripts/contact.js" defer></script>
   <script>
     // Mobile menu toggle
     document.querySelector('.nav-toggle').addEventListener('click', () => {

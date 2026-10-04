@@ -829,7 +829,7 @@ p.collections {
 =============================================*/
 .impact {
     position:       relative;
-    background:     url('images/world-map-light.png') center/cover no-repeat;
+    background:     radial-gradient(ellipse at center, #fffdf8 0%, #f2eadc 100%);
     padding:        6em 0;
     color:          var(--color-dark);
   }
@@ -2124,7 +2124,7 @@ section.certificates .card p {
   position: relative;
   height: 50vh;                    /* adjust as needed */
   min-height: 300px;
-  background: url('images/certifications_bg.jpg') center/cover no-repeat;
+  background: url('images/certifications_bg-web.webp') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -2760,3 +2760,56 @@ section.certificates .card p {
     width: 100%;
   }
 }
+
+/* Homepage: Made in Oman story */
+.hero-slider .oman-hero-copy { width: min(94%, 900px); }
+.hero-slider .oman-hero-copy h1 { color: #fff; font-size: clamp(2.8rem, 6.5vw, 5.4rem); line-height: 1.1; margin: .25rem 0 1rem; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+.hero-slider .oman-hero-copy .oman-hero-eyebrow { color: #f4db9b; font-size: .76rem; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
+.hero-slider .oman-hero-copy .oman-hero-subtitle { color: #fff; font-size: clamp(.95rem, 1.6vw, 1.2rem); margin: 0 auto; max-width: 560px; }
+.oman-hero-link { display: inline-flex; align-items: center; gap: .9rem; border-bottom: 1px solid #e5c780; color: #fff; font-size: .78rem; letter-spacing: .12em; margin-top: 1.6rem; padding: .65rem 0; text-transform: uppercase; }
+.oman-hero-link:hover { color: #f4db9b; }
+.oman-story { background: #f6f1e8; padding: clamp(3rem, 6vw, 5.5rem) 0; scroll-margin-top: 110px; }
+.oman-story-layout { display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: clamp(2rem, 6vw, 6rem); }
+.oman-story-eyebrow { color: #846322; font-size: .72rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin-bottom: 1rem; }
+.oman-story-copy h2 { color: #30291d; font-size: clamp(2.1rem, 4vw, 3.35rem); line-height: 1.2; margin-bottom: 1.5rem; }
+.oman-story-copy > p:not(.oman-story-eyebrow) { color: #5d5547; line-height: 1.85; margin-bottom: 1rem; }
+.oman-story-copy .oman-story-intro { font-size: 1.08rem; }
+.oman-story-credentials { display: flex; align-items: center; gap: 1rem; border-top: 1px solid #d9c8a6; border-bottom: 1px solid #d9c8a6; padding: 1rem 0; margin: 1.75rem 0; }
+.oman-story-credentials span { color: #97722b; font-size: 1.6rem; }
+.oman-story-credentials p { color: #5d4c2f; font-size: .87rem; }
+.oman-story-link { display: inline-flex; align-items: center; gap: 1rem; color: #7b591b; font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.oman-story-link:hover, .oman-video-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.oman-story-video { width: 100%; max-width: 400px; justify-self: center; }
+.oman-story-video iframe { background: #fff; border: 1px solid #ded3bf; border-radius: 4px; display: block; height: 600px; width: 100%; box-shadow: 0 16px 40px rgba(71,50,15,.08); }
+.oman-video-link { display: block; color: #76561e; font-size: .8rem; text-align: center; margin-top: 1rem; padding: .5rem; }
+.oman-hero-link:focus-visible, .oman-story-link:focus-visible, .oman-video-link:focus-visible { outline: 2px solid #b79138; outline-offset: 6px; }
+@media (max-width: 768px) {
+  .oman-story-layout { grid-template-columns: 1fr; }
+  .oman-story-copy { max-width: 580px; }
+  .oman-story-video { max-width: 400px; }
+  .hero-slider .oman-hero-copy h1 { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .hero-slider .oman-hero-copy .oman-hero-subtitle { max-width: 310px; }
+}
+@media (max-width: 380px) {
+  .oman-story-video iframe { height: 560px; }
+  .oman-hero-link { margin-top: .8rem; }
+}
+
+.oman-story-copy .oman-award-date { color: #846322; font-size: .8rem; margin: 1.5rem 0; }
+.award-page-video { margin: 2.5rem auto 0; }
+
+/* Enquiries, press coverage and career interest */
+.contact-intro, .career-interest-note { max-width: 720px; margin: 1rem auto 2rem; text-align: center; }
+.contact-form label { font-size: .88rem; font-weight: 600; margin-bottom: -.65rem; }
+.contact-form .enquiry-help { font-size: .8rem; color: #615a4d; }
+.contact-form .enquiry-help a { text-decoration: underline; text-underline-offset: 3px; }
+.award-press-link { margin: 1rem 0; line-height: 1.6; }
+.about-award-note { background: #f6f1e8; }
+.about-award-note h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 1rem; }
+.about-award-note p { margin-bottom: 1.5rem; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+img { height: auto; }
+.logo img { width: auto; }
