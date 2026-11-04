@@ -13,6 +13,19 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://azzajewels.com/cnc.html" />
   <meta property="og:image" content="https://azzajewels.com/images/logo.png" />
+<style>
+.cnc-product-gallery img,.cnc-expanded-gallery img{cursor:zoom-in}
+.cnc-product-gallery img:focus-visible,.cnc-expanded-gallery img:focus-visible{outline:3px solid #b78a35;outline-offset:4px}
+.cnc-lightbox{border:0;padding:0;background:transparent;color:white;max-width:none;max-height:none;width:100vw;height:100dvh;position:fixed;inset:0}
+.cnc-lightbox::backdrop{background:rgba(0,0,0,.92)}
+.cnc-lightbox[open]{display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.94)}
+.cnc-lightbox-image{display:block;max-width:calc(100vw - 120px);max-height:calc(100dvh - 125px);width:auto;height:auto;object-fit:contain}
+.cnc-lightbox-close,.cnc-lightbox-prev,.cnc-lightbox-next{position:absolute;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:rgba(20,20,20,.65);color:white;cursor:pointer;width:46px;height:46px;font-size:26px;display:grid;place-items:center;z-index:2}
+.cnc-lightbox-close{top:18px;right:20px}.cnc-lightbox-prev{left:16px;top:50%;transform:translateY(-50%)}.cnc-lightbox-next{right:16px;top:50%;transform:translateY(-50%)}
+.cnc-lightbox-close:hover,.cnc-lightbox-prev:hover,.cnc-lightbox-next:hover{background:#9c7839}
+.cnc-lightbox-caption{position:absolute;bottom:20px;left:15px;right:15px;text-align:center;color:#fff;font:14px/1.5 sans-serif}
+@media(max-width:600px){.cnc-lightbox-image{max-width:calc(100vw - 24px);max-height:calc(100dvh - 145px)}.cnc-lightbox-prev,.cnc-lightbox-next{top:auto;bottom:60px;transform:none}.cnc-lightbox-close{top:12px;right:12px}}
+</style>
 </head>
 <body class="capability-page cnc-page">
   <nav class="nav"><div class="container">
@@ -29,5 +42,30 @@
   <section class="section cnc-cta"><div class="container"><p class="eyebrow">Manufacturing Enquiries</p><h2>Let’s create your next gold collection.</h2><p>Speak with our team about CNC ball products, chains, necklaces, bangles and made-to-requirement production.</p><a class="btn" href="contact.html">Contact our team</a></div></section>
   <footer class="footer"><div class="footer-inner"><p class="footer-note">© 2026 Azza Jewels. All rights reserved.</p></div></footer>
   <script>document.querySelector('.nav-toggle').addEventListener('click',()=>document.querySelector('.nav-menu').classList.toggle('nav-menu_visible'));</script>
+<dialog class="cnc-lightbox" aria-label="CNC jewellery image viewer">
+<button type="button" class="cnc-lightbox-close" aria-label="Close image viewer">&times;</button>
+<button type="button" class="cnc-lightbox-prev" aria-label="Previous image">&#8249;</button>
+<img class="cnc-lightbox-image" alt="" />
+<button type="button" class="cnc-lightbox-next" aria-label="Next image">&#8250;</button>
+<div class="cnc-lightbox-caption" aria-live="polite"></div>
+</dialog>
+<script>
+(()=>{
+const galleryImages=[...document.querySelectorAll('.cnc-product-gallery img, .cnc-expanded-gallery img')];
+const dialog=document.querySelector('.cnc-lightbox');
+const viewer=dialog.querySelector('.cnc-lightbox-image');
+const caption=dialog.querySelector('.cnc-lightbox-caption');
+let current=0;let trigger=null;
+function show(index){current=(index+galleryImages.length)%galleryImages.length;const img=galleryImages[current];viewer.src=img.currentSrc||img.src;viewer.alt=img.alt;caption.textContent=`${img.alt} · ${current+1} of ${galleryImages.length}`;}
+function open(index){trigger=galleryImages[index];show(index);dialog.showModal();dialog.querySelector('.cnc-lightbox-close').focus();}
+galleryImages.forEach((img,index)=>{img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label',`View larger image: ${img.alt}`);img.addEventListener('click',()=>open(index));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(index);}});});
+dialog.querySelector('.cnc-lightbox-close').addEventListener('click',()=>dialog.close());
+dialog.querySelector('.cnc-lightbox-prev').addEventListener('click',()=>show(current-1));
+dialog.querySelector('.cnc-lightbox-next').addEventListener('click',()=>show(current+1));
+dialog.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
+dialog.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();show(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();show(current-1);}});
+dialog.addEventListener('close',()=>{viewer.removeAttribute('src');if(trigger)trigger.focus();});
+})();
+</script>
 </body>
 </html>
